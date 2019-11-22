@@ -1,0 +1,87 @@
+C:\Users\Van Sang Nguyen\Desktop\ProjectWF\ShopCakeManager\ShopCakeManager\bin\Debug\ShopCakeManager.exe.config
+C:\Users\Van Sang Nguyen\Desktop\Project\ShopCakeManager\ShopCakeManager\bin\Debug\ShopCakeManager.exe.config
+C:\Users\Van Sang Nguyen\Desktop\Project\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.Properties.Resources.resources
+C:\Users\Van Sang Nguyen\Desktop\Project\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.csproj.GenerateResource.Cache
+C:\Users\Van Sang Nguyen\Desktop\Project\ShopCakeManager\ShopCakeManager\bin\Debug\ShopCakeManager.exe
+C:\Users\Van Sang Nguyen\Desktop\Project\ShopCakeManager\ShopCakeManager\bin\Debug\ShopCakeManager.pdb
+C:\Users\Van Sang Nguyen\Desktop\Project\ShopCakeManager\ShopCakeManager\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\Van Sang Nguyen\Desktop\Project\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_DangNhap.resources
+C:\Users\Van Sang Nguyen\Desktop\Project\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.exe
+C:\Users\Van Sang Nguyen\Desktop\Project\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.pdb
+C:\Users\Van Sang Nguyen\Desktop\Project\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_Menu.resources
+C:\Users\Van Sang Nguyen\Desktop\Project\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_Alert.resources
+C:\Users\Van Sang Nguyen\Desktop\Project\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.csprojResolveAssemblyReference.cache
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager-Winforms-675399c4d065310882d8c36c3f01267af8bdf7fa\ShopCakeManager\ShopCakeManager\bin\Debug\ShopCakeManager.exe.config
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager-Winforms-675399c4d065310882d8c36c3f01267af8bdf7fa\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.exe
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager-Winforms-675399c4d065310882d8c36c3f01267af8bdf7fa\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.pdb
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager-Winforms-675399c4d065310882d8c36c3f01267af8bdf7fa\ShopCakeManager\ShopCakeManager\bin\Debug\ShopCakeManager.exe
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager-Winforms-675399c4d065310882d8c36c3f01267af8bdf7fa\ShopCakeManager\ShopCakeManager\bin\Debug\ShopCakeManager.pdb
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager-Winforms-675399c4d065310882d8c36c3f01267af8bdf7fa\ShopCakeManager\ShopCakeManager\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager-Winforms-675399c4d065310882d8c36c3f01267af8bdf7fa\ShopCakeManager\ShopCakeManager\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager-Winforms-675399c4d065310882d8c36c3f01267af8bdf7fa\ShopCakeManager\ShopCakeManager\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager-Winforms-675399c4d065310882d8c36c3f01267af8bdf7fa\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.csprojResolveAssemblyReference.cache
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager-Winforms-675399c4d065310882d8c36c3f01267af8bdf7fa\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_Alert.resources
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager-Winforms-675399c4d065310882d8c36c3f01267af8bdf7fa\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_DangNhap.resources
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager-Winforms-675399c4d065310882d8c36c3f01267af8bdf7fa\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_Menu.resources
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager-Winforms-675399c4d065310882d8c36c3f01267af8bdf7fa\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.Properties.Resources.resources
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager-Winforms-675399c4d065310882d8c36c3f01267af8bdf7fa\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.csproj.GenerateResource.Cache
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\bin\Debug\ShopCakeManager.exe.config
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\bin\Debug\ShopCakeManager.exe
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\bin\Debug\ShopCakeManager.pdb
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.csprojResolveAssemblyReference.cache
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frmNote.resources
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_Alert.resources
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_BanHang.resources
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_DangNhap.resources
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_NhapKhachHang.resources
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.Properties.Resources.resources
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.CTHD.resources
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.SanPham.resources
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.TheLoaiSP.resources
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.csproj.GenerateResource.Cache
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.exe
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.pdb
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\bin\Debug\BunifuDataViz 1.0.dll
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_BanhTrongNgay.resources
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_CheckBanhHetHan.resources
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_ChiTietPhieuDat.resources
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_DanhSachKHTiemNang.resources
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_HoaDonOnLine.resources
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_QuanLy.resources
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_ThongKe.resources
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.UC_ChiTetBanhKem.resources
+C:\Users\Van Sang Nguyen\Desktop\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.UC_ThongTinBanhKem_List.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\bin\Debug\ShopCakeManager.exe.config
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\bin\Debug\ShopCakeManager.exe
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\bin\Debug\ShopCakeManager.pdb
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frmCatHD.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frmNote.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_Alert.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_BanHang.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_BanhTrongNgay.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_CheckBanhHetHan.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_ChiTietPhieuDat.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_DangNhap.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_DanhSachKHTiemNang.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_HoaDonOnLine.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_NhapKhachHang.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_QuanLy.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_SanPham.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_ThemBanhTrongNgay.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_ThemSanPham.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_ThongKe.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.Properties.Resources.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.CTHD.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.SanPham.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.TheLoaiSP.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.UC.ThemBanhTrongNgay.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.UC.TTBK.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.UC_ChiTetBanhKem.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.UC.UC_ListSanPham.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.csproj.GenerateResource.Cache
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.exe
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.pdb
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.csprojResolveAssemblyReference.cache
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_GiamGia.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.frm_TheLoaiSanPham.resources
+D:\banhkem_new\ShopCakeManager\ShopCakeManager\obj\Debug\ShopCakeManager.UC.UC_LoaiSP.resources

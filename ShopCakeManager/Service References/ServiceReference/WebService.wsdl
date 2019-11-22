@@ -1,0 +1,4373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="UpdateSanPham">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mabk" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="hinhanh" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tenbk" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idloai" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idgiamgia" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="mota" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSanPhamResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateSizeSanPhamDangChon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="masizebanh" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="masize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="gia" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSizeSanPhamDangChonResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_ThongTinSanPhamUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mabanhkem" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ThongTinSanPhamUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ThongTinSanPhamUpdateResult" type="tns:ArrayOfThongTinQuanLySanPham" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfThongTinQuanLySanPham">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ThongTinQuanLySanPham" nillable="true" type="tns:ThongTinQuanLySanPham" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ThongTinQuanLySanPham">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tenBanhKem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenLoai" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="hinhAnhBK" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="moTa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenGG" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="maBK" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="maGG" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="maSB" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="maTL" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="get_ThongTinSanPhamUpdate1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mabanhkem" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ThongTinSanPhamUpdate1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ThongTinSanPhamUpdate1Result" type="tns:ArrayOfThongTinSanPham" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfThongTinSanPham">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ThongTinSanPham" nillable="true" type="tns:ThongTinSanPham" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ThongTinSanPham">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tenBanhKem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenLoai" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="hinhAnhBK" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="moTa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenGG" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenSize" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="maBK" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="maSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="maGG" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="maSB" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="maTL" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="gia" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="get_ListGiamGia">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_ListGiamGiaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ListGiamGiaResult" type="tns:ArrayOfGiamGia" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGiamGia">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GiamGia" nillable="true" type="tns:GiamGia" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GiamGia">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MaGiamGia" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenGiamGia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BanhKems" type="tns:ArrayOfBanhKem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfBanhKem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BanhKem" nillable="true" type="tns:BanhKem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BanhKem">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MaBanhKem" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenBanhKem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HinhAnh" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MoTa" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaLoaiBanh" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaGiamGia" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SizeBanhs" type="tns:ArrayOfSizeBanh" />
+          <s:element minOccurs="0" maxOccurs="1" name="TheLoaiBanh" type="tns:TheLoaiBanh" />
+          <s:element minOccurs="0" maxOccurs="1" name="GiamGia" type="tns:GiamGia" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSizeBanh">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SizeBanh" nillable="true" type="tns:SizeBanh" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SizeBanh">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MaSizeBanh" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaBanhKem" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Gia" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChiTietPhieuDats" type="tns:ArrayOfChiTietPhieuDat" />
+          <s:element minOccurs="0" maxOccurs="1" name="BanhTrongNgays" type="tns:ArrayOfBanhTrongNgay" />
+          <s:element minOccurs="0" maxOccurs="1" name="BanhKem" type="tns:BanhKem" />
+          <s:element minOccurs="0" maxOccurs="1" name="Size" type="tns:Size" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfChiTietPhieuDat">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ChiTietPhieuDat" nillable="true" type="tns:ChiTietPhieuDat" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ChiTietPhieuDat">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MaCTPD" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaPD" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SoLuong" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThanhTien" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaSizeBanh" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhieuDat" type="tns:PhieuDat" />
+          <s:element minOccurs="0" maxOccurs="1" name="SizeBanh" type="tns:SizeBanh" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PhieuDat">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MaPhieuDat" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaNV" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgayLap" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgayNhan" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TongTien" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TrangThai_Online" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="TrangThai_ThanhToan" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="TrangThai_GiaoHang" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaKhachHang" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="GhiChu" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChiTietPhieuDats" type="tns:ArrayOfChiTietPhieuDat" />
+          <s:element minOccurs="0" maxOccurs="1" name="DoanhThus" type="tns:ArrayOfDoanhThu" />
+          <s:element minOccurs="0" maxOccurs="1" name="KhachHang" type="tns:KhachHang" />
+          <s:element minOccurs="0" maxOccurs="1" name="NhanVien" type="tns:NhanVien" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDoanhThu">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DoanhThu" nillable="true" type="tns:DoanhThu" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DoanhThu">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MaDoanhThu" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaHD" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaPD" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TongTien" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="HoaDon" type="tns:HoaDon" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhieuDat" type="tns:PhieuDat" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="HoaDon">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MaHoaDon" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgayLap" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaNhanVien" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TongTien" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TrangThai" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaKhachHang" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChiTietHoaDons" type="tns:ArrayOfChiTietHoaDon" />
+          <s:element minOccurs="0" maxOccurs="1" name="DoanhThus" type="tns:ArrayOfDoanhThu" />
+          <s:element minOccurs="0" maxOccurs="1" name="KhachHang" type="tns:KhachHang" />
+          <s:element minOccurs="0" maxOccurs="1" name="NhanVien" type="tns:NhanVien" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfChiTietHoaDon">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ChiTietHoaDon" nillable="true" type="tns:ChiTietHoaDon" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ChiTietHoaDon">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MaCTHD" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaHoaDon" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaBanhTrongNgay" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SoLuong" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ThanhTien" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="HoaDon" type="tns:HoaDon" />
+          <s:element minOccurs="0" maxOccurs="1" name="BanhTrongNgay" type="tns:BanhTrongNgay" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BanhTrongNgay">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MaBanhTrongNgay" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SoLuong" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgaySanXuat" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgayHetHan" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaSizeBanh" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TrangThaiBanhHetHan" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChiTietHoaDons" type="tns:ArrayOfChiTietHoaDon" />
+          <s:element minOccurs="0" maxOccurs="1" name="SizeBanh" type="tns:SizeBanh" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="KhachHang">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MaKhachHang" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenKhachHang" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SDT_KhachHang" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiaChi_KhachHang" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TrangThai" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="HoaDons" type="tns:ArrayOfHoaDon" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhieuDats" type="tns:ArrayOfPhieuDat" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfHoaDon">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="HoaDon" nillable="true" type="tns:HoaDon" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPhieuDat">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PhieuDat" nillable="true" type="tns:PhieuDat" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="NhanVien">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MaNV" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenNV" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GioiTinh" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SDT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiaChi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HinhAnh" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HoaDons" type="tns:ArrayOfHoaDon" />
+          <s:element minOccurs="0" maxOccurs="1" name="NhanVien_Quyens" type="tns:ArrayOfNhanVien_Quyen" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhieuDats" type="tns:ArrayOfPhieuDat" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfNhanVien_Quyen">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NhanVien_Quyen" nillable="true" type="tns:NhanVien_Quyen" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="NhanVien_Quyen">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_NV_Q" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaNhanVien" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaQuyen" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TrangThai" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="NhanVien" type="tns:NhanVien" />
+          <s:element minOccurs="0" maxOccurs="1" name="Quyen" type="tns:Quyen" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Quyen">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MaQuyen" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenQuyen" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NhanVien_Quyens" type="tns:ArrayOfNhanVien_Quyen" />
+          <s:element minOccurs="0" maxOccurs="1" name="Quyen_HoatDongs" type="tns:ArrayOfQuyen_HoatDong" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfQuyen_HoatDong">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Quyen_HoatDong" nillable="true" type="tns:Quyen_HoatDong" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Quyen_HoatDong">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_Q_HD" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaQuyen" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaHoatDong" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TrangThai" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="HoatDong" type="tns:HoatDong" />
+          <s:element minOccurs="0" maxOccurs="1" name="Quyen" type="tns:Quyen" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="HoatDong">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MaHoatDong" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenHoatDong" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Quyen_HoatDongs" type="tns:ArrayOfQuyen_HoatDong" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfBanhTrongNgay">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BanhTrongNgay" nillable="true" type="tns:BanhTrongNgay" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Size">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MaSize" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenSize" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SizeBanhs" type="tns:ArrayOfSizeBanh" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TheLoaiBanh">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MaLoai" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenLoai" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HinhAnhLoai" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BanhKems" type="tns:ArrayOfBanhKem" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertGiamGia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tenGG" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertGiamGiaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateGiamGia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maGG" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="tenGG" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateGiamGiaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteGiamGia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maGG" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteGiamGiaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_ThongTinSanPham">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_ThongTinSanPhamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ThongTinSanPhamResult" type="tns:ArrayOfTheLoaiBanh" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTheLoaiBanh">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TheLoaiBanh" nillable="true" type="tns:TheLoaiBanh" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="get_ThongTinLoaiSPDangChon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maLoai" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ThongTinLoaiSPDangChonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ThongTinLoaiSPDangChonResult" type="tns:ArrayOfTheLoaiBanh" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_imageFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_imageFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_imageFileResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="f" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insert_CTPD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maPD" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="soLuong" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="thanhTien" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="maSizeBanh" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insert_CTPDResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="insert_PhieuDat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maNV" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ngayNhan" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="tongTien" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="maKH" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ghiChu" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="trangThai" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insert_PhieuDatResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="insert_KhachHang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tenKH" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="diaChi" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insert_KhachHangResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="insert_CTHD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maHD" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="maBanhTrongNgay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="soLuong" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="thanhTien" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insert_CTHDResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="insert_HoaDon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maNV" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="tongTien" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="maKH" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="trangthai" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insert_HoaDonResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_CTHDChuaThanhToan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maHD" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_CTHDChuaThanhToanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_CTHDChuaThanhToanResult" type="tns:ArrayOfChiTietHoaDonChuaThanhToan" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfChiTietHoaDonChuaThanhToan">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ChiTietHoaDonChuaThanhToan" nillable="true" type="tns:ChiTietHoaDonChuaThanhToan" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ChiTietHoaDonChuaThanhToan">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="maBanhTrongNgay" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="soLuong" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="get_phieuDatChuaThanhToan">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_phieuDatChuaThanhToanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_phieuDatChuaThanhToanResult" type="tns:ArrayOfThongTinPhieuDatChuaThanhToan" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfThongTinPhieuDatChuaThanhToan">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ThongTinPhieuDatChuaThanhToan" nillable="true" type="tns:ThongTinPhieuDatChuaThanhToan" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ThongTinPhieuDatChuaThanhToan">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="maPD" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenKH" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ngayLap" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ngayNhan" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="tongTien" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenNV" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="get_hoaDonChuaThanhToan">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_hoaDonChuaThanhToanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_hoaDonChuaThanhToanResult" type="tns:ArrayOfThongTinHoaDonChuaThanhToan" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfThongTinHoaDonChuaThanhToan">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ThongTinHoaDonChuaThanhToan" nillable="true" type="tns:ThongTinHoaDonChuaThanhToan" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ThongTinHoaDonChuaThanhToan">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="maHD" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenKH" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ngayLap" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="tongTien" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenNV" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="get_kTraSoLuongBanhTrongNgay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ma_banh_trong_ngay" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_kTraSoLuongBanhTrongNgayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_kTraSoLuongBanhTrongNgayResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_MaxMaKhachHang">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_MaxMaKhachHangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_MaxMaKhachHangResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_MAXMaPhieuDat">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_MAXMaPhieuDatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_MAXMaPhieuDatResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_MAXMaHoaDon">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_MAXMaHoaDonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_MAXMaHoaDonResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="check_MaKH">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ma" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="check_MaKHResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="check_MaKHResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ChiTietPD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="masizebanh" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ChiTietPDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ChiTietPDResult" type="tns:ArrayOfChiTietPD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfChiTietPD">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ChiTietPD" nillable="true" type="tns:ChiTietPD" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ChiTietPD">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tenbanhkem" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="gia" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="tengiamgia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tensize" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="get_ChiTietHD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mabanhtrongngay" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ChiTietHDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ChiTietHDResult" type="tns:ArrayOfChiTietHD" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfChiTietHD">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ChiTietHD" nillable="true" type="tns:ChiTietHD" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ChiTietHD">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tenbanhkem" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="gia" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="tengiamgia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tensize" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="get_ListBanhKemvsTheLoai">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="variable" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ListBanhKemvsTheLoaiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ListBanhKemvsTheLoaiResult" type="tns:ArrayOfThongTinBanhKem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfThongTinBanhKem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ThongTinBanhKem" nillable="true" type="tns:ThongTinBanhKem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ThongTinBanhKem">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="maSizeBanh" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="anhBanhKem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenBanhKem" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="giaBanhKem" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="giamgiaBanhKem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenSizeBanhKem" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="get_ListBanhTrongNgayVsTheLoai">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="variable" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ListBanhTrongNgayVsTheLoaiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ListBanhTrongNgayVsTheLoaiResult" type="tns:ArrayOfThongTinBanhTrongNgay" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfThongTinBanhTrongNgay">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ThongTinBanhTrongNgay" nillable="true" type="tns:ThongTinBanhTrongNgay" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ThongTinBanhTrongNgay">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="maBanhTrongNgay" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="anhSP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenSP" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="giaSP" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="giamgia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenSizeSP" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="get_ListBanhKem">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_ListBanhKemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ListBanhKemResult" type="tns:ArrayOfThongTinBanhKem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ListBanhTrongNgay">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_ListBanhTrongNgayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ListBanhTrongNgayResult" type="tns:ArrayOfThongTinBanhTrongNgay" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ListTheLoaiBanh">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_ListTheLoaiBanhResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ListTheLoaiBanhResult" type="tns:ArrayOfTheLoaiBanh" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_Count_UserNV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_Count_UserNVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_Count_UserNVResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_CountUser_PassNV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_CountUser_PassNVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_CountUser_PassNVResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_IDNV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_IDNVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_IDNVResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_MaQuyenNV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maNV" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_MaQuyenNVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_MaQuyenNVResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_MaHoatDong">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maQuyen" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_MaHoatDongResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_MaHoatDongResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="get_username">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_usernameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_usernameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getHour">
+        <s:complexType />
+      </s:element>
+      <s:element name="getHourResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getHourResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMinute">
+        <s:complexType />
+      </s:element>
+      <s:element name="getMinuteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getMinuteResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSecond">
+        <s:complexType />
+      </s:element>
+      <s:element name="getSecondResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getSecondResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="update_soLuongBanhTrongNgaySauThanhToan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mabanhtrongngay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="soluong" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="update_soLuongBanhTrongNgaySauThanhToanResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_DanhSachPhieuDat_Online">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_DanhSachPhieuDat_OnlineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_DanhSachPhieuDat_OnlineResult" type="tns:ArrayOfThongTinPhieuDat" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfThongTinPhieuDat">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ThongTinPhieuDat" nillable="true" type="tns:ThongTinPhieuDat" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ThongTinPhieuDat">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="maKH" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="tongtien" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="thanhtien" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="maNV" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenKH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="diachiKH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sdt" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="maPD" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ngaydat" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ngaynhan" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="trangthai_online" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="trangthai_thanhtoan" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="maCTPD" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="maBK" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="soLuong" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="gia" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="maSize" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenSize" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenBK" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenGiamGia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenNV" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="get_DanhSachPhieuDat_TaiQuay">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_DanhSachPhieuDat_TaiQuayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_DanhSachPhieuDat_TaiQuayResult" type="tns:ArrayOfThongTinPhieuDat" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_DanhSachPhieuDat_DangGiao">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_DanhSachPhieuDat_DangGiaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_DanhSachPhieuDat_DangGiaoResult" type="tns:ArrayOfThongTinPhieuDat" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ChiTietPhieuDat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mapd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ChiTietPhieuDatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ChiTietPhieuDatResult" type="tns:ArrayOfThongTinPhieuDat" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ThongTinPhieuDat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mapd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ThongTinPhieuDatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ThongTinPhieuDatResult" type="tns:ArrayOfThongTinPhieuDat" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="set_TinhTrangDangGiaoHangPhieuDat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mapd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="set_TinhTrangDangGiaoHangPhieuDatResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="set_TinhTrangGiaoHangXong">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mapd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="set_TinhTrangGiaoHangXongResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="search_PhieuDatDangGiao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="chuoi" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="search_PhieuDatDangGiaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="search_PhieuDatDangGiaoResult" type="tns:ArrayOfThongTinPhieuDat" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="search_PhieuDatOnline">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="chuoi" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="search_PhieuDatOnlineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="search_PhieuDatOnlineResult" type="tns:ArrayOfThongTinPhieuDat" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="search_PhieuDatTaiQuay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="chuoi" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="search_PhieuDatTaiQuayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="search_PhieuDatTaiQuayResult" type="tns:ArrayOfThongTinPhieuDat" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_HoaDonDaBan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tuNgay" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="denNgay" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_HoaDonDaBanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_HoaDonDaBanResult" type="tns:ArrayOfThongTinHoaDon" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfThongTinHoaDon">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ThongTinHoaDon" nillable="true" type="tns:ThongTinHoaDon" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ThongTinHoaDon">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tenNV" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="maNV" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="maHD" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ngayLap" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="tongTien" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="trangThai" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="get_ThongKePhieuDat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tuNgay" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="denNgay" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ThongKePhieuDatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ThongKePhieuDatResult" type="tns:ArrayOfThongTinPhieuDat" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ThongKeTongTien_HDDaBan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tuNgay" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="denNgay" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ThongKeTongTien_HDDaBanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_ThongKeTongTien_HDDaBanResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ThongKeTongTien_PhieuDat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tuNgay" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="denNgay" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ThongKeTongTien_PhieuDatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_ThongKeTongTien_PhieuDatResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_KH_TiemNang">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_KH_TiemNangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_KH_TiemNangResult" type="tns:ArrayOfThongTinKhachHang" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfThongTinKhachHang">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ThongTinKhachHang" nillable="true" type="tns:ThongTinKhachHang" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ThongTinKhachHang">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="maKH" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="soLan" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenKH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sdt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="diaChi" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="get_KH_TiemNang_DatHang">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_KH_TiemNang_DatHangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_KH_TiemNang_DatHangResult" type="tns:ArrayOfThongTinKhachHang" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_SoLieu_TongSoHD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tuNgay" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="denNgay" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_SoLieu_TongSoHDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_SoLieu_TongSoHDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_SoLieu_TongSoPD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tuNgay" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="denNgay" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_SoLieu_TongSoPDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_SoLieu_TongSoPDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_SoLieu_DoanhThuPD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tuNgay" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="denNgay" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_SoLieu_DoanhThuPDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_SoLieu_DoanhThuPDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_SoLieu_DoanhThuHD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tuNgay" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="denNgay" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_SoLieu_DoanhThuHDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_SoLieu_DoanhThuHDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_SoLieuBanhTrongNgay">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_SoLieuBanhTrongNgayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_SoLieuBanhTrongNgayResult" type="tns:ArrayOfThongKeBanhTrongNgay" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfThongKeBanhTrongNgay">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ThongKeBanhTrongNgay" nillable="true" type="tns:ThongKeBanhTrongNgay" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ThongKeBanhTrongNgay">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tenBanh" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenGiamGia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenSize" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="hinhAnh" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenLoai" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="moTa" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="soLuong" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="donGia" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="maBK" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="maBanhTrongNgay" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="maTL" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ngayHetHan" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ngaySX" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="get_ThongKeSoBanhHienTaiTrongNgay">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_ThongKeSoBanhHienTaiTrongNgayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_ThongKeSoBanhHienTaiTrongNgayResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ThongKeSoBanhDaBanTrongNgay">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_ThongKeSoBanhDaBanTrongNgayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_ThongKeSoBanhDaBanTrongNgayResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ThongKeSoBanhHetHanTrongNgay">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_ThongKeSoBanhHetHanTrongNgayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_ThongKeSoBanhHetHanTrongNgayResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ListBanhHetHan">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_ListBanhHetHanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ListBanhHetHanResult" type="tns:ArrayOfThongKeBanhTrongNgay" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_CountSoLoaiBanh_HetHan">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_CountSoLoaiBanh_HetHanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_CountSoLoaiBanh_HetHanResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_CountBanhHetHan">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_CountBanhHetHanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_CountBanhHetHanResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="set_TinhTrangBanhTrongNgayHetHanThanhFalse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maBanhTrongNgay" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="set_TinhTrangBanhTrongNgayHetHanThanhFalseResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_ListDanhSachBanhTrongNgay">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_ListDanhSachBanhTrongNgayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ListDanhSachBanhTrongNgayResult" type="tns:ArrayOfThongKeBanhTrongNgay" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ThongTinChiTietBanhTrongNgay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maBanhTrongNgay" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ThongTinChiTietBanhTrongNgayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ThongTinChiTietBanhTrongNgayResult" type="tns:ArrayOfThongTinChiTietBanhTrongNgay" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfThongTinChiTietBanhTrongNgay">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ThongTinChiTietBanhTrongNgay" nillable="true" type="tns:ThongTinChiTietBanhTrongNgay" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ThongTinChiTietBanhTrongNgay">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="hinhAnhBK" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenBK" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenTheLoai" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenSize" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="moTa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenGiamGia" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ngaySX" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ngayHetHan" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="soLuong" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="donGia" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="maBK" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="maSB" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="maSize" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="get_ListTenBanhKem">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_ListTenBanhKemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ListTenBanhKemResult" type="tns:ArrayOfThongTinBanhKem_Insert" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfThongTinBanhKem_Insert">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ThongTinBanhKem_Insert" nillable="true" type="tns:ThongTinBanhKem_Insert" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ThongTinBanhKem_Insert">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="maBanhKem" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenBanhKem" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaBanhKem" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TenBanhKem" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="get_SizeTheoBanhKem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maBanhKem" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_SizeTheoBanhKemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_SizeTheoBanhKemResult" type="tns:ArrayOfSizeBanhKem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSizeBanhKem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SizeBanhKem" nillable="true" type="tns:SizeBanhKem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SizeBanhKem">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="maSize" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenSize" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="gia" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="get_MaSizeBanh">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maBanhKem" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="maSize" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_MaSizeBanhResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_MaSizeBanhResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_MaSizeTrongNgay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maBanhKem" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="maSizeBanh" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_MaSizeTrongNgayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_MaSizeTrongNgayResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_BanhTrongNgay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maSizeBanh" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="soLuong" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ngaySX" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ngayHetHan" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_BanhTrongNgayResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="check_BanhDaInsertTrongNgay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maSizeBanh" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="check_BanhDaInsertTrongNgayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="check_BanhDaInsertTrongNgayResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ListBanhNhapTrongNgay">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_ListBanhNhapTrongNgayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ListBanhNhapTrongNgayResult" type="tns:ArrayOfMaBanhTrongNgay" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMaBanhTrongNgay">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MaBanhTrongNgay" nillable="true" type="tns:MaBanhTrongNgay" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MaBanhTrongNgay">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="idBTN" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="get_ThongTinBanhKemUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maBanhTrongNgay" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ThongTinBanhKemUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ThongTinBanhKemUpdateResult" type="tns:ArrayOfThongTinChiTietBanhTrongNgay" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="set_TTCapNhatBanhTrongNgay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maBanhTrongNgay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ngayHH" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="soluong" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="set_TTCapNhatBanhTrongNgayResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="set_TinhTrangBanhTrongNgay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maBanhTrongNgay" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="set_TinhTrangBanhTrongNgayResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_ThongTinQuanLyBanhKem">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_ThongTinQuanLyBanhKemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ThongTinQuanLyBanhKemResult" type="tns:ArrayOfThongTinQuanLySanPham" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ThongTinBanhKemDangChon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maBanhKem" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ThongTinBanhKemDangChonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ThongTinBanhKemDangChonResult" type="tns:ArrayOfThongTinQuanLySanPham" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_SizeSanPhamDangChon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maBanhKem" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_SizeSanPhamDangChonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_SizeSanPhamDangChonResult" type="tns:ArrayOfThongTinSize" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfThongTinSize">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ThongTinSize" nillable="true" type="tns:ThongTinSize" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ThongTinSize">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="maSB" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="maBK" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="maSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="gia" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenSize" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="get_GiaSanPhamTheoSize">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maSizeBanh" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_GiaSanPhamTheoSizeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="get_GiaSanPhamTheoSizeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_TenTheLoai">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_TenTheLoaiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_TenTheLoaiResult" type="tns:ArrayOfTheLoaiBanhKem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTheLoaiBanhKem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TheLoaiBanhKem" nillable="true" type="tns:TheLoaiBanhKem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TheLoaiBanhKem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tenTL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="maTL" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="get_TenBanhKem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maTL" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_TenBanhKemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_TenBanhKemResult" type="tns:ArrayOfBanhKem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_TenSize">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_TenSizeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_TenSizeResult" type="tns:ArrayOfThongTinSize" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_TenGiamGia">
+        <s:complexType />
+      </s:element>
+      <s:element name="get_TenGiamGiaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_TenGiamGiaResult" type="tns:ArrayOfThongTinGiamGia" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfThongTinGiamGia">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ThongTinGiamGia" nillable="true" type="tns:ThongTinGiamGia" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ThongTinGiamGia">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="maGG" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="tenGG" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertSanPham">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tenBK" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hinhAnh" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="moTa" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="maLoai" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="maGiamGia" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertSanPhamResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="getMaxIdBanhKem">
+        <s:complexType />
+      </s:element>
+      <s:element name="getMaxIdBanhKemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getMaxIdBanhKemResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertMaSizeBanh">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maBK" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="maSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="giaTien" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertMaSizeBanhResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="getMaSizeBanhDangChon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maBK" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="maSize" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMaSizeBanhDangChonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getMaSizeBanhDangChonResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="UpdateSanPhamSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSanPham" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSanPhamSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSizeSanPhamDangChonSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSizeSanPhamDangChon" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSizeSanPhamDangChonSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateSizeSanPhamDangChonResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongTinSanPhamUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ThongTinSanPhamUpdate" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongTinSanPhamUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ThongTinSanPhamUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongTinSanPhamUpdate1SoapIn">
+    <wsdl:part name="parameters" element="tns:get_ThongTinSanPhamUpdate1" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongTinSanPhamUpdate1SoapOut">
+    <wsdl:part name="parameters" element="tns:get_ThongTinSanPhamUpdate1Response" />
+  </wsdl:message>
+  <wsdl:message name="get_ListGiamGiaSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ListGiamGia" />
+  </wsdl:message>
+  <wsdl:message name="get_ListGiamGiaSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ListGiamGiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertGiamGiaSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertGiamGia" />
+  </wsdl:message>
+  <wsdl:message name="InsertGiamGiaSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertGiamGiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGiamGiaSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateGiamGia" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGiamGiaSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateGiamGiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteGiamGiaSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteGiamGia" />
+  </wsdl:message>
+  <wsdl:message name="DeleteGiamGiaSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteGiamGiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongTinSanPhamSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ThongTinSanPham" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongTinSanPhamSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ThongTinSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongTinLoaiSPDangChonSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ThongTinLoaiSPDangChon" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongTinLoaiSPDangChonSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ThongTinLoaiSPDangChonResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_imageFileSoapIn">
+    <wsdl:part name="parameters" element="tns:get_imageFile" />
+  </wsdl:message>
+  <wsdl:message name="get_imageFileSoapOut">
+    <wsdl:part name="parameters" element="tns:get_imageFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadFile" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="insert_CTPDSoapIn">
+    <wsdl:part name="parameters" element="tns:insert_CTPD" />
+  </wsdl:message>
+  <wsdl:message name="insert_CTPDSoapOut">
+    <wsdl:part name="parameters" element="tns:insert_CTPDResponse" />
+  </wsdl:message>
+  <wsdl:message name="insert_PhieuDatSoapIn">
+    <wsdl:part name="parameters" element="tns:insert_PhieuDat" />
+  </wsdl:message>
+  <wsdl:message name="insert_PhieuDatSoapOut">
+    <wsdl:part name="parameters" element="tns:insert_PhieuDatResponse" />
+  </wsdl:message>
+  <wsdl:message name="insert_KhachHangSoapIn">
+    <wsdl:part name="parameters" element="tns:insert_KhachHang" />
+  </wsdl:message>
+  <wsdl:message name="insert_KhachHangSoapOut">
+    <wsdl:part name="parameters" element="tns:insert_KhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="insert_CTHDSoapIn">
+    <wsdl:part name="parameters" element="tns:insert_CTHD" />
+  </wsdl:message>
+  <wsdl:message name="insert_CTHDSoapOut">
+    <wsdl:part name="parameters" element="tns:insert_CTHDResponse" />
+  </wsdl:message>
+  <wsdl:message name="insert_HoaDonSoapIn">
+    <wsdl:part name="parameters" element="tns:insert_HoaDon" />
+  </wsdl:message>
+  <wsdl:message name="insert_HoaDonSoapOut">
+    <wsdl:part name="parameters" element="tns:insert_HoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_CTHDChuaThanhToanSoapIn">
+    <wsdl:part name="parameters" element="tns:get_CTHDChuaThanhToan" />
+  </wsdl:message>
+  <wsdl:message name="get_CTHDChuaThanhToanSoapOut">
+    <wsdl:part name="parameters" element="tns:get_CTHDChuaThanhToanResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_phieuDatChuaThanhToanSoapIn">
+    <wsdl:part name="parameters" element="tns:get_phieuDatChuaThanhToan" />
+  </wsdl:message>
+  <wsdl:message name="get_phieuDatChuaThanhToanSoapOut">
+    <wsdl:part name="parameters" element="tns:get_phieuDatChuaThanhToanResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_hoaDonChuaThanhToanSoapIn">
+    <wsdl:part name="parameters" element="tns:get_hoaDonChuaThanhToan" />
+  </wsdl:message>
+  <wsdl:message name="get_hoaDonChuaThanhToanSoapOut">
+    <wsdl:part name="parameters" element="tns:get_hoaDonChuaThanhToanResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_kTraSoLuongBanhTrongNgaySoapIn">
+    <wsdl:part name="parameters" element="tns:get_kTraSoLuongBanhTrongNgay" />
+  </wsdl:message>
+  <wsdl:message name="get_kTraSoLuongBanhTrongNgaySoapOut">
+    <wsdl:part name="parameters" element="tns:get_kTraSoLuongBanhTrongNgayResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_MaxMaKhachHangSoapIn">
+    <wsdl:part name="parameters" element="tns:get_MaxMaKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="get_MaxMaKhachHangSoapOut">
+    <wsdl:part name="parameters" element="tns:get_MaxMaKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_MAXMaPhieuDatSoapIn">
+    <wsdl:part name="parameters" element="tns:get_MAXMaPhieuDat" />
+  </wsdl:message>
+  <wsdl:message name="get_MAXMaPhieuDatSoapOut">
+    <wsdl:part name="parameters" element="tns:get_MAXMaPhieuDatResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_MAXMaHoaDonSoapIn">
+    <wsdl:part name="parameters" element="tns:get_MAXMaHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="get_MAXMaHoaDonSoapOut">
+    <wsdl:part name="parameters" element="tns:get_MAXMaHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="check_MaKHSoapIn">
+    <wsdl:part name="parameters" element="tns:check_MaKH" />
+  </wsdl:message>
+  <wsdl:message name="check_MaKHSoapOut">
+    <wsdl:part name="parameters" element="tns:check_MaKHResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ChiTietPDSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ChiTietPD" />
+  </wsdl:message>
+  <wsdl:message name="get_ChiTietPDSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ChiTietPDResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ChiTietHDSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ChiTietHD" />
+  </wsdl:message>
+  <wsdl:message name="get_ChiTietHDSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ChiTietHDResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ListBanhKemvsTheLoaiSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ListBanhKemvsTheLoai" />
+  </wsdl:message>
+  <wsdl:message name="get_ListBanhKemvsTheLoaiSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ListBanhKemvsTheLoaiResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ListBanhTrongNgayVsTheLoaiSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ListBanhTrongNgayVsTheLoai" />
+  </wsdl:message>
+  <wsdl:message name="get_ListBanhTrongNgayVsTheLoaiSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ListBanhTrongNgayVsTheLoaiResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ListBanhKemSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ListBanhKem" />
+  </wsdl:message>
+  <wsdl:message name="get_ListBanhKemSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ListBanhKemResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ListBanhTrongNgaySoapIn">
+    <wsdl:part name="parameters" element="tns:get_ListBanhTrongNgay" />
+  </wsdl:message>
+  <wsdl:message name="get_ListBanhTrongNgaySoapOut">
+    <wsdl:part name="parameters" element="tns:get_ListBanhTrongNgayResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ListTheLoaiBanhSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ListTheLoaiBanh" />
+  </wsdl:message>
+  <wsdl:message name="get_ListTheLoaiBanhSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ListTheLoaiBanhResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_Count_UserNVSoapIn">
+    <wsdl:part name="parameters" element="tns:get_Count_UserNV" />
+  </wsdl:message>
+  <wsdl:message name="get_Count_UserNVSoapOut">
+    <wsdl:part name="parameters" element="tns:get_Count_UserNVResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_CountUser_PassNVSoapIn">
+    <wsdl:part name="parameters" element="tns:get_CountUser_PassNV" />
+  </wsdl:message>
+  <wsdl:message name="get_CountUser_PassNVSoapOut">
+    <wsdl:part name="parameters" element="tns:get_CountUser_PassNVResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_IDNVSoapIn">
+    <wsdl:part name="parameters" element="tns:get_IDNV" />
+  </wsdl:message>
+  <wsdl:message name="get_IDNVSoapOut">
+    <wsdl:part name="parameters" element="tns:get_IDNVResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_MaQuyenNVSoapIn">
+    <wsdl:part name="parameters" element="tns:get_MaQuyenNV" />
+  </wsdl:message>
+  <wsdl:message name="get_MaQuyenNVSoapOut">
+    <wsdl:part name="parameters" element="tns:get_MaQuyenNVResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_MaHoatDongSoapIn">
+    <wsdl:part name="parameters" element="tns:get_MaHoatDong" />
+  </wsdl:message>
+  <wsdl:message name="get_MaHoatDongSoapOut">
+    <wsdl:part name="parameters" element="tns:get_MaHoatDongResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_usernameSoapIn">
+    <wsdl:part name="parameters" element="tns:get_username" />
+  </wsdl:message>
+  <wsdl:message name="get_usernameSoapOut">
+    <wsdl:part name="parameters" element="tns:get_usernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="getHourSoapIn">
+    <wsdl:part name="parameters" element="tns:getHour" />
+  </wsdl:message>
+  <wsdl:message name="getHourSoapOut">
+    <wsdl:part name="parameters" element="tns:getHourResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMinuteSoapIn">
+    <wsdl:part name="parameters" element="tns:getMinute" />
+  </wsdl:message>
+  <wsdl:message name="getMinuteSoapOut">
+    <wsdl:part name="parameters" element="tns:getMinuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSecondSoapIn">
+    <wsdl:part name="parameters" element="tns:getSecond" />
+  </wsdl:message>
+  <wsdl:message name="getSecondSoapOut">
+    <wsdl:part name="parameters" element="tns:getSecondResponse" />
+  </wsdl:message>
+  <wsdl:message name="update_soLuongBanhTrongNgaySauThanhToanSoapIn">
+    <wsdl:part name="parameters" element="tns:update_soLuongBanhTrongNgaySauThanhToan" />
+  </wsdl:message>
+  <wsdl:message name="update_soLuongBanhTrongNgaySauThanhToanSoapOut">
+    <wsdl:part name="parameters" element="tns:update_soLuongBanhTrongNgaySauThanhToanResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_DanhSachPhieuDat_OnlineSoapIn">
+    <wsdl:part name="parameters" element="tns:get_DanhSachPhieuDat_Online" />
+  </wsdl:message>
+  <wsdl:message name="get_DanhSachPhieuDat_OnlineSoapOut">
+    <wsdl:part name="parameters" element="tns:get_DanhSachPhieuDat_OnlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_DanhSachPhieuDat_TaiQuaySoapIn">
+    <wsdl:part name="parameters" element="tns:get_DanhSachPhieuDat_TaiQuay" />
+  </wsdl:message>
+  <wsdl:message name="get_DanhSachPhieuDat_TaiQuaySoapOut">
+    <wsdl:part name="parameters" element="tns:get_DanhSachPhieuDat_TaiQuayResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_DanhSachPhieuDat_DangGiaoSoapIn">
+    <wsdl:part name="parameters" element="tns:get_DanhSachPhieuDat_DangGiao" />
+  </wsdl:message>
+  <wsdl:message name="get_DanhSachPhieuDat_DangGiaoSoapOut">
+    <wsdl:part name="parameters" element="tns:get_DanhSachPhieuDat_DangGiaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ChiTietPhieuDatSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ChiTietPhieuDat" />
+  </wsdl:message>
+  <wsdl:message name="get_ChiTietPhieuDatSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ChiTietPhieuDatResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongTinPhieuDatSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ThongTinPhieuDat" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongTinPhieuDatSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ThongTinPhieuDatResponse" />
+  </wsdl:message>
+  <wsdl:message name="set_TinhTrangDangGiaoHangPhieuDatSoapIn">
+    <wsdl:part name="parameters" element="tns:set_TinhTrangDangGiaoHangPhieuDat" />
+  </wsdl:message>
+  <wsdl:message name="set_TinhTrangDangGiaoHangPhieuDatSoapOut">
+    <wsdl:part name="parameters" element="tns:set_TinhTrangDangGiaoHangPhieuDatResponse" />
+  </wsdl:message>
+  <wsdl:message name="set_TinhTrangGiaoHangXongSoapIn">
+    <wsdl:part name="parameters" element="tns:set_TinhTrangGiaoHangXong" />
+  </wsdl:message>
+  <wsdl:message name="set_TinhTrangGiaoHangXongSoapOut">
+    <wsdl:part name="parameters" element="tns:set_TinhTrangGiaoHangXongResponse" />
+  </wsdl:message>
+  <wsdl:message name="search_PhieuDatDangGiaoSoapIn">
+    <wsdl:part name="parameters" element="tns:search_PhieuDatDangGiao" />
+  </wsdl:message>
+  <wsdl:message name="search_PhieuDatDangGiaoSoapOut">
+    <wsdl:part name="parameters" element="tns:search_PhieuDatDangGiaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="search_PhieuDatOnlineSoapIn">
+    <wsdl:part name="parameters" element="tns:search_PhieuDatOnline" />
+  </wsdl:message>
+  <wsdl:message name="search_PhieuDatOnlineSoapOut">
+    <wsdl:part name="parameters" element="tns:search_PhieuDatOnlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="search_PhieuDatTaiQuaySoapIn">
+    <wsdl:part name="parameters" element="tns:search_PhieuDatTaiQuay" />
+  </wsdl:message>
+  <wsdl:message name="search_PhieuDatTaiQuaySoapOut">
+    <wsdl:part name="parameters" element="tns:search_PhieuDatTaiQuayResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_HoaDonDaBanSoapIn">
+    <wsdl:part name="parameters" element="tns:get_HoaDonDaBan" />
+  </wsdl:message>
+  <wsdl:message name="get_HoaDonDaBanSoapOut">
+    <wsdl:part name="parameters" element="tns:get_HoaDonDaBanResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongKePhieuDatSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ThongKePhieuDat" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongKePhieuDatSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ThongKePhieuDatResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongKeTongTien_HDDaBanSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ThongKeTongTien_HDDaBan" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongKeTongTien_HDDaBanSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ThongKeTongTien_HDDaBanResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongKeTongTien_PhieuDatSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ThongKeTongTien_PhieuDat" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongKeTongTien_PhieuDatSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ThongKeTongTien_PhieuDatResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_KH_TiemNangSoapIn">
+    <wsdl:part name="parameters" element="tns:get_KH_TiemNang" />
+  </wsdl:message>
+  <wsdl:message name="get_KH_TiemNangSoapOut">
+    <wsdl:part name="parameters" element="tns:get_KH_TiemNangResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_KH_TiemNang_DatHangSoapIn">
+    <wsdl:part name="parameters" element="tns:get_KH_TiemNang_DatHang" />
+  </wsdl:message>
+  <wsdl:message name="get_KH_TiemNang_DatHangSoapOut">
+    <wsdl:part name="parameters" element="tns:get_KH_TiemNang_DatHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_SoLieu_TongSoHDSoapIn">
+    <wsdl:part name="parameters" element="tns:get_SoLieu_TongSoHD" />
+  </wsdl:message>
+  <wsdl:message name="get_SoLieu_TongSoHDSoapOut">
+    <wsdl:part name="parameters" element="tns:get_SoLieu_TongSoHDResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_SoLieu_TongSoPDSoapIn">
+    <wsdl:part name="parameters" element="tns:get_SoLieu_TongSoPD" />
+  </wsdl:message>
+  <wsdl:message name="get_SoLieu_TongSoPDSoapOut">
+    <wsdl:part name="parameters" element="tns:get_SoLieu_TongSoPDResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_SoLieu_DoanhThuPDSoapIn">
+    <wsdl:part name="parameters" element="tns:get_SoLieu_DoanhThuPD" />
+  </wsdl:message>
+  <wsdl:message name="get_SoLieu_DoanhThuPDSoapOut">
+    <wsdl:part name="parameters" element="tns:get_SoLieu_DoanhThuPDResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_SoLieu_DoanhThuHDSoapIn">
+    <wsdl:part name="parameters" element="tns:get_SoLieu_DoanhThuHD" />
+  </wsdl:message>
+  <wsdl:message name="get_SoLieu_DoanhThuHDSoapOut">
+    <wsdl:part name="parameters" element="tns:get_SoLieu_DoanhThuHDResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_SoLieuBanhTrongNgaySoapIn">
+    <wsdl:part name="parameters" element="tns:get_SoLieuBanhTrongNgay" />
+  </wsdl:message>
+  <wsdl:message name="get_SoLieuBanhTrongNgaySoapOut">
+    <wsdl:part name="parameters" element="tns:get_SoLieuBanhTrongNgayResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongKeSoBanhHienTaiTrongNgaySoapIn">
+    <wsdl:part name="parameters" element="tns:get_ThongKeSoBanhHienTaiTrongNgay" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongKeSoBanhHienTaiTrongNgaySoapOut">
+    <wsdl:part name="parameters" element="tns:get_ThongKeSoBanhHienTaiTrongNgayResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongKeSoBanhDaBanTrongNgaySoapIn">
+    <wsdl:part name="parameters" element="tns:get_ThongKeSoBanhDaBanTrongNgay" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongKeSoBanhDaBanTrongNgaySoapOut">
+    <wsdl:part name="parameters" element="tns:get_ThongKeSoBanhDaBanTrongNgayResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongKeSoBanhHetHanTrongNgaySoapIn">
+    <wsdl:part name="parameters" element="tns:get_ThongKeSoBanhHetHanTrongNgay" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongKeSoBanhHetHanTrongNgaySoapOut">
+    <wsdl:part name="parameters" element="tns:get_ThongKeSoBanhHetHanTrongNgayResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ListBanhHetHanSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ListBanhHetHan" />
+  </wsdl:message>
+  <wsdl:message name="get_ListBanhHetHanSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ListBanhHetHanResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_CountSoLoaiBanh_HetHanSoapIn">
+    <wsdl:part name="parameters" element="tns:get_CountSoLoaiBanh_HetHan" />
+  </wsdl:message>
+  <wsdl:message name="get_CountSoLoaiBanh_HetHanSoapOut">
+    <wsdl:part name="parameters" element="tns:get_CountSoLoaiBanh_HetHanResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_CountBanhHetHanSoapIn">
+    <wsdl:part name="parameters" element="tns:get_CountBanhHetHan" />
+  </wsdl:message>
+  <wsdl:message name="get_CountBanhHetHanSoapOut">
+    <wsdl:part name="parameters" element="tns:get_CountBanhHetHanResponse" />
+  </wsdl:message>
+  <wsdl:message name="set_TinhTrangBanhTrongNgayHetHanThanhFalseSoapIn">
+    <wsdl:part name="parameters" element="tns:set_TinhTrangBanhTrongNgayHetHanThanhFalse" />
+  </wsdl:message>
+  <wsdl:message name="set_TinhTrangBanhTrongNgayHetHanThanhFalseSoapOut">
+    <wsdl:part name="parameters" element="tns:set_TinhTrangBanhTrongNgayHetHanThanhFalseResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ListDanhSachBanhTrongNgaySoapIn">
+    <wsdl:part name="parameters" element="tns:get_ListDanhSachBanhTrongNgay" />
+  </wsdl:message>
+  <wsdl:message name="get_ListDanhSachBanhTrongNgaySoapOut">
+    <wsdl:part name="parameters" element="tns:get_ListDanhSachBanhTrongNgayResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongTinChiTietBanhTrongNgaySoapIn">
+    <wsdl:part name="parameters" element="tns:get_ThongTinChiTietBanhTrongNgay" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongTinChiTietBanhTrongNgaySoapOut">
+    <wsdl:part name="parameters" element="tns:get_ThongTinChiTietBanhTrongNgayResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ListTenBanhKemSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ListTenBanhKem" />
+  </wsdl:message>
+  <wsdl:message name="get_ListTenBanhKemSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ListTenBanhKemResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_SizeTheoBanhKemSoapIn">
+    <wsdl:part name="parameters" element="tns:get_SizeTheoBanhKem" />
+  </wsdl:message>
+  <wsdl:message name="get_SizeTheoBanhKemSoapOut">
+    <wsdl:part name="parameters" element="tns:get_SizeTheoBanhKemResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_MaSizeBanhSoapIn">
+    <wsdl:part name="parameters" element="tns:get_MaSizeBanh" />
+  </wsdl:message>
+  <wsdl:message name="get_MaSizeBanhSoapOut">
+    <wsdl:part name="parameters" element="tns:get_MaSizeBanhResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_MaSizeTrongNgaySoapIn">
+    <wsdl:part name="parameters" element="tns:get_MaSizeTrongNgay" />
+  </wsdl:message>
+  <wsdl:message name="get_MaSizeTrongNgaySoapOut">
+    <wsdl:part name="parameters" element="tns:get_MaSizeTrongNgayResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_BanhTrongNgaySoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_BanhTrongNgay" />
+  </wsdl:message>
+  <wsdl:message name="Insert_BanhTrongNgaySoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_BanhTrongNgayResponse" />
+  </wsdl:message>
+  <wsdl:message name="check_BanhDaInsertTrongNgaySoapIn">
+    <wsdl:part name="parameters" element="tns:check_BanhDaInsertTrongNgay" />
+  </wsdl:message>
+  <wsdl:message name="check_BanhDaInsertTrongNgaySoapOut">
+    <wsdl:part name="parameters" element="tns:check_BanhDaInsertTrongNgayResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ListBanhNhapTrongNgaySoapIn">
+    <wsdl:part name="parameters" element="tns:get_ListBanhNhapTrongNgay" />
+  </wsdl:message>
+  <wsdl:message name="get_ListBanhNhapTrongNgaySoapOut">
+    <wsdl:part name="parameters" element="tns:get_ListBanhNhapTrongNgayResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongTinBanhKemUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ThongTinBanhKemUpdate" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongTinBanhKemUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ThongTinBanhKemUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="set_TTCapNhatBanhTrongNgaySoapIn">
+    <wsdl:part name="parameters" element="tns:set_TTCapNhatBanhTrongNgay" />
+  </wsdl:message>
+  <wsdl:message name="set_TTCapNhatBanhTrongNgaySoapOut">
+    <wsdl:part name="parameters" element="tns:set_TTCapNhatBanhTrongNgayResponse" />
+  </wsdl:message>
+  <wsdl:message name="set_TinhTrangBanhTrongNgaySoapIn">
+    <wsdl:part name="parameters" element="tns:set_TinhTrangBanhTrongNgay" />
+  </wsdl:message>
+  <wsdl:message name="set_TinhTrangBanhTrongNgaySoapOut">
+    <wsdl:part name="parameters" element="tns:set_TinhTrangBanhTrongNgayResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongTinQuanLyBanhKemSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ThongTinQuanLyBanhKem" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongTinQuanLyBanhKemSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ThongTinQuanLyBanhKemResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongTinBanhKemDangChonSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ThongTinBanhKemDangChon" />
+  </wsdl:message>
+  <wsdl:message name="get_ThongTinBanhKemDangChonSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ThongTinBanhKemDangChonResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_SizeSanPhamDangChonSoapIn">
+    <wsdl:part name="parameters" element="tns:get_SizeSanPhamDangChon" />
+  </wsdl:message>
+  <wsdl:message name="get_SizeSanPhamDangChonSoapOut">
+    <wsdl:part name="parameters" element="tns:get_SizeSanPhamDangChonResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_GiaSanPhamTheoSizeSoapIn">
+    <wsdl:part name="parameters" element="tns:get_GiaSanPhamTheoSize" />
+  </wsdl:message>
+  <wsdl:message name="get_GiaSanPhamTheoSizeSoapOut">
+    <wsdl:part name="parameters" element="tns:get_GiaSanPhamTheoSizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_TenTheLoaiSoapIn">
+    <wsdl:part name="parameters" element="tns:get_TenTheLoai" />
+  </wsdl:message>
+  <wsdl:message name="get_TenTheLoaiSoapOut">
+    <wsdl:part name="parameters" element="tns:get_TenTheLoaiResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_TenBanhKemSoapIn">
+    <wsdl:part name="parameters" element="tns:get_TenBanhKem" />
+  </wsdl:message>
+  <wsdl:message name="get_TenBanhKemSoapOut">
+    <wsdl:part name="parameters" element="tns:get_TenBanhKemResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_TenSizeSoapIn">
+    <wsdl:part name="parameters" element="tns:get_TenSize" />
+  </wsdl:message>
+  <wsdl:message name="get_TenSizeSoapOut">
+    <wsdl:part name="parameters" element="tns:get_TenSizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_TenGiamGiaSoapIn">
+    <wsdl:part name="parameters" element="tns:get_TenGiamGia" />
+  </wsdl:message>
+  <wsdl:message name="get_TenGiamGiaSoapOut">
+    <wsdl:part name="parameters" element="tns:get_TenGiamGiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertSanPhamSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertSanPham" />
+  </wsdl:message>
+  <wsdl:message name="InsertSanPhamSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertSanPhamResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMaxIdBanhKemSoapIn">
+    <wsdl:part name="parameters" element="tns:getMaxIdBanhKem" />
+  </wsdl:message>
+  <wsdl:message name="getMaxIdBanhKemSoapOut">
+    <wsdl:part name="parameters" element="tns:getMaxIdBanhKemResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertMaSizeBanhSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertMaSizeBanh" />
+  </wsdl:message>
+  <wsdl:message name="InsertMaSizeBanhSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertMaSizeBanhResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMaSizeBanhDangChonSoapIn">
+    <wsdl:part name="parameters" element="tns:getMaSizeBanhDangChon" />
+  </wsdl:message>
+  <wsdl:message name="getMaSizeBanhDangChonSoapOut">
+    <wsdl:part name="parameters" element="tns:getMaSizeBanhDangChonResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceSoap">
+    <wsdl:operation name="UpdateSanPham">
+      <wsdl:input message="tns:UpdateSanPhamSoapIn" />
+      <wsdl:output message="tns:UpdateSanPhamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSizeSanPhamDangChon">
+      <wsdl:input message="tns:UpdateSizeSanPhamDangChonSoapIn" />
+      <wsdl:output message="tns:UpdateSizeSanPhamDangChonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinSanPhamUpdate">
+      <wsdl:input message="tns:get_ThongTinSanPhamUpdateSoapIn" />
+      <wsdl:output message="tns:get_ThongTinSanPhamUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinSanPhamUpdate1">
+      <wsdl:input message="tns:get_ThongTinSanPhamUpdate1SoapIn" />
+      <wsdl:output message="tns:get_ThongTinSanPhamUpdate1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ListGiamGia">
+      <wsdl:input message="tns:get_ListGiamGiaSoapIn" />
+      <wsdl:output message="tns:get_ListGiamGiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertGiamGia">
+      <wsdl:input message="tns:InsertGiamGiaSoapIn" />
+      <wsdl:output message="tns:InsertGiamGiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGiamGia">
+      <wsdl:input message="tns:UpdateGiamGiaSoapIn" />
+      <wsdl:output message="tns:UpdateGiamGiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGiamGia">
+      <wsdl:input message="tns:DeleteGiamGiaSoapIn" />
+      <wsdl:output message="tns:DeleteGiamGiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinSanPham">
+      <wsdl:input message="tns:get_ThongTinSanPhamSoapIn" />
+      <wsdl:output message="tns:get_ThongTinSanPhamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinLoaiSPDangChon">
+      <wsdl:input message="tns:get_ThongTinLoaiSPDangChonSoapIn" />
+      <wsdl:output message="tns:get_ThongTinLoaiSPDangChonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_imageFile">
+      <wsdl:input message="tns:get_imageFileSoapIn" />
+      <wsdl:output message="tns:get_imageFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <wsdl:input message="tns:UploadFileSoapIn" />
+      <wsdl:output message="tns:UploadFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insert_CTPD">
+      <wsdl:input message="tns:insert_CTPDSoapIn" />
+      <wsdl:output message="tns:insert_CTPDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insert_PhieuDat">
+      <wsdl:input message="tns:insert_PhieuDatSoapIn" />
+      <wsdl:output message="tns:insert_PhieuDatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insert_KhachHang">
+      <wsdl:input message="tns:insert_KhachHangSoapIn" />
+      <wsdl:output message="tns:insert_KhachHangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insert_CTHD">
+      <wsdl:input message="tns:insert_CTHDSoapIn" />
+      <wsdl:output message="tns:insert_CTHDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insert_HoaDon">
+      <wsdl:input message="tns:insert_HoaDonSoapIn" />
+      <wsdl:output message="tns:insert_HoaDonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_CTHDChuaThanhToan">
+      <wsdl:input message="tns:get_CTHDChuaThanhToanSoapIn" />
+      <wsdl:output message="tns:get_CTHDChuaThanhToanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_phieuDatChuaThanhToan">
+      <wsdl:input message="tns:get_phieuDatChuaThanhToanSoapIn" />
+      <wsdl:output message="tns:get_phieuDatChuaThanhToanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_hoaDonChuaThanhToan">
+      <wsdl:input message="tns:get_hoaDonChuaThanhToanSoapIn" />
+      <wsdl:output message="tns:get_hoaDonChuaThanhToanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_kTraSoLuongBanhTrongNgay">
+      <wsdl:input message="tns:get_kTraSoLuongBanhTrongNgaySoapIn" />
+      <wsdl:output message="tns:get_kTraSoLuongBanhTrongNgaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_MaxMaKhachHang">
+      <wsdl:input message="tns:get_MaxMaKhachHangSoapIn" />
+      <wsdl:output message="tns:get_MaxMaKhachHangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_MAXMaPhieuDat">
+      <wsdl:input message="tns:get_MAXMaPhieuDatSoapIn" />
+      <wsdl:output message="tns:get_MAXMaPhieuDatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_MAXMaHoaDon">
+      <wsdl:input message="tns:get_MAXMaHoaDonSoapIn" />
+      <wsdl:output message="tns:get_MAXMaHoaDonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="check_MaKH">
+      <wsdl:input message="tns:check_MaKHSoapIn" />
+      <wsdl:output message="tns:check_MaKHSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ChiTietPD">
+      <wsdl:input message="tns:get_ChiTietPDSoapIn" />
+      <wsdl:output message="tns:get_ChiTietPDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ChiTietHD">
+      <wsdl:input message="tns:get_ChiTietHDSoapIn" />
+      <wsdl:output message="tns:get_ChiTietHDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ListBanhKemvsTheLoai">
+      <wsdl:input message="tns:get_ListBanhKemvsTheLoaiSoapIn" />
+      <wsdl:output message="tns:get_ListBanhKemvsTheLoaiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ListBanhTrongNgayVsTheLoai">
+      <wsdl:input message="tns:get_ListBanhTrongNgayVsTheLoaiSoapIn" />
+      <wsdl:output message="tns:get_ListBanhTrongNgayVsTheLoaiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ListBanhKem">
+      <wsdl:input message="tns:get_ListBanhKemSoapIn" />
+      <wsdl:output message="tns:get_ListBanhKemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ListBanhTrongNgay">
+      <wsdl:input message="tns:get_ListBanhTrongNgaySoapIn" />
+      <wsdl:output message="tns:get_ListBanhTrongNgaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ListTheLoaiBanh">
+      <wsdl:input message="tns:get_ListTheLoaiBanhSoapIn" />
+      <wsdl:output message="tns:get_ListTheLoaiBanhSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_Count_UserNV">
+      <wsdl:input message="tns:get_Count_UserNVSoapIn" />
+      <wsdl:output message="tns:get_Count_UserNVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_CountUser_PassNV">
+      <wsdl:input message="tns:get_CountUser_PassNVSoapIn" />
+      <wsdl:output message="tns:get_CountUser_PassNVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_IDNV">
+      <wsdl:input message="tns:get_IDNVSoapIn" />
+      <wsdl:output message="tns:get_IDNVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_MaQuyenNV">
+      <wsdl:input message="tns:get_MaQuyenNVSoapIn" />
+      <wsdl:output message="tns:get_MaQuyenNVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_MaHoatDong">
+      <wsdl:input message="tns:get_MaHoatDongSoapIn" />
+      <wsdl:output message="tns:get_MaHoatDongSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_username">
+      <wsdl:input message="tns:get_usernameSoapIn" />
+      <wsdl:output message="tns:get_usernameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getHour">
+      <wsdl:input message="tns:getHourSoapIn" />
+      <wsdl:output message="tns:getHourSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMinute">
+      <wsdl:input message="tns:getMinuteSoapIn" />
+      <wsdl:output message="tns:getMinuteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSecond">
+      <wsdl:input message="tns:getSecondSoapIn" />
+      <wsdl:output message="tns:getSecondSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="update_soLuongBanhTrongNgaySauThanhToan">
+      <wsdl:input message="tns:update_soLuongBanhTrongNgaySauThanhToanSoapIn" />
+      <wsdl:output message="tns:update_soLuongBanhTrongNgaySauThanhToanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_DanhSachPhieuDat_Online">
+      <wsdl:input message="tns:get_DanhSachPhieuDat_OnlineSoapIn" />
+      <wsdl:output message="tns:get_DanhSachPhieuDat_OnlineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_DanhSachPhieuDat_TaiQuay">
+      <wsdl:input message="tns:get_DanhSachPhieuDat_TaiQuaySoapIn" />
+      <wsdl:output message="tns:get_DanhSachPhieuDat_TaiQuaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_DanhSachPhieuDat_DangGiao">
+      <wsdl:input message="tns:get_DanhSachPhieuDat_DangGiaoSoapIn" />
+      <wsdl:output message="tns:get_DanhSachPhieuDat_DangGiaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ChiTietPhieuDat">
+      <wsdl:input message="tns:get_ChiTietPhieuDatSoapIn" />
+      <wsdl:output message="tns:get_ChiTietPhieuDatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinPhieuDat">
+      <wsdl:input message="tns:get_ThongTinPhieuDatSoapIn" />
+      <wsdl:output message="tns:get_ThongTinPhieuDatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="set_TinhTrangDangGiaoHangPhieuDat">
+      <wsdl:input message="tns:set_TinhTrangDangGiaoHangPhieuDatSoapIn" />
+      <wsdl:output message="tns:set_TinhTrangDangGiaoHangPhieuDatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="set_TinhTrangGiaoHangXong">
+      <wsdl:input message="tns:set_TinhTrangGiaoHangXongSoapIn" />
+      <wsdl:output message="tns:set_TinhTrangGiaoHangXongSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="search_PhieuDatDangGiao">
+      <wsdl:input message="tns:search_PhieuDatDangGiaoSoapIn" />
+      <wsdl:output message="tns:search_PhieuDatDangGiaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="search_PhieuDatOnline">
+      <wsdl:input message="tns:search_PhieuDatOnlineSoapIn" />
+      <wsdl:output message="tns:search_PhieuDatOnlineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="search_PhieuDatTaiQuay">
+      <wsdl:input message="tns:search_PhieuDatTaiQuaySoapIn" />
+      <wsdl:output message="tns:search_PhieuDatTaiQuaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_HoaDonDaBan">
+      <wsdl:input message="tns:get_HoaDonDaBanSoapIn" />
+      <wsdl:output message="tns:get_HoaDonDaBanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongKePhieuDat">
+      <wsdl:input message="tns:get_ThongKePhieuDatSoapIn" />
+      <wsdl:output message="tns:get_ThongKePhieuDatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongKeTongTien_HDDaBan">
+      <wsdl:input message="tns:get_ThongKeTongTien_HDDaBanSoapIn" />
+      <wsdl:output message="tns:get_ThongKeTongTien_HDDaBanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongKeTongTien_PhieuDat">
+      <wsdl:input message="tns:get_ThongKeTongTien_PhieuDatSoapIn" />
+      <wsdl:output message="tns:get_ThongKeTongTien_PhieuDatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_KH_TiemNang">
+      <wsdl:input message="tns:get_KH_TiemNangSoapIn" />
+      <wsdl:output message="tns:get_KH_TiemNangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_KH_TiemNang_DatHang">
+      <wsdl:input message="tns:get_KH_TiemNang_DatHangSoapIn" />
+      <wsdl:output message="tns:get_KH_TiemNang_DatHangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_SoLieu_TongSoHD">
+      <wsdl:input message="tns:get_SoLieu_TongSoHDSoapIn" />
+      <wsdl:output message="tns:get_SoLieu_TongSoHDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_SoLieu_TongSoPD">
+      <wsdl:input message="tns:get_SoLieu_TongSoPDSoapIn" />
+      <wsdl:output message="tns:get_SoLieu_TongSoPDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_SoLieu_DoanhThuPD">
+      <wsdl:input message="tns:get_SoLieu_DoanhThuPDSoapIn" />
+      <wsdl:output message="tns:get_SoLieu_DoanhThuPDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_SoLieu_DoanhThuHD">
+      <wsdl:input message="tns:get_SoLieu_DoanhThuHDSoapIn" />
+      <wsdl:output message="tns:get_SoLieu_DoanhThuHDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_SoLieuBanhTrongNgay">
+      <wsdl:input message="tns:get_SoLieuBanhTrongNgaySoapIn" />
+      <wsdl:output message="tns:get_SoLieuBanhTrongNgaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongKeSoBanhHienTaiTrongNgay">
+      <wsdl:input message="tns:get_ThongKeSoBanhHienTaiTrongNgaySoapIn" />
+      <wsdl:output message="tns:get_ThongKeSoBanhHienTaiTrongNgaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongKeSoBanhDaBanTrongNgay">
+      <wsdl:input message="tns:get_ThongKeSoBanhDaBanTrongNgaySoapIn" />
+      <wsdl:output message="tns:get_ThongKeSoBanhDaBanTrongNgaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongKeSoBanhHetHanTrongNgay">
+      <wsdl:input message="tns:get_ThongKeSoBanhHetHanTrongNgaySoapIn" />
+      <wsdl:output message="tns:get_ThongKeSoBanhHetHanTrongNgaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ListBanhHetHan">
+      <wsdl:input message="tns:get_ListBanhHetHanSoapIn" />
+      <wsdl:output message="tns:get_ListBanhHetHanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_CountSoLoaiBanh_HetHan">
+      <wsdl:input message="tns:get_CountSoLoaiBanh_HetHanSoapIn" />
+      <wsdl:output message="tns:get_CountSoLoaiBanh_HetHanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_CountBanhHetHan">
+      <wsdl:input message="tns:get_CountBanhHetHanSoapIn" />
+      <wsdl:output message="tns:get_CountBanhHetHanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="set_TinhTrangBanhTrongNgayHetHanThanhFalse">
+      <wsdl:input message="tns:set_TinhTrangBanhTrongNgayHetHanThanhFalseSoapIn" />
+      <wsdl:output message="tns:set_TinhTrangBanhTrongNgayHetHanThanhFalseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ListDanhSachBanhTrongNgay">
+      <wsdl:input message="tns:get_ListDanhSachBanhTrongNgaySoapIn" />
+      <wsdl:output message="tns:get_ListDanhSachBanhTrongNgaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinChiTietBanhTrongNgay">
+      <wsdl:input message="tns:get_ThongTinChiTietBanhTrongNgaySoapIn" />
+      <wsdl:output message="tns:get_ThongTinChiTietBanhTrongNgaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ListTenBanhKem">
+      <wsdl:input message="tns:get_ListTenBanhKemSoapIn" />
+      <wsdl:output message="tns:get_ListTenBanhKemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_SizeTheoBanhKem">
+      <wsdl:input message="tns:get_SizeTheoBanhKemSoapIn" />
+      <wsdl:output message="tns:get_SizeTheoBanhKemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_MaSizeBanh">
+      <wsdl:input message="tns:get_MaSizeBanhSoapIn" />
+      <wsdl:output message="tns:get_MaSizeBanhSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_MaSizeTrongNgay">
+      <wsdl:input message="tns:get_MaSizeTrongNgaySoapIn" />
+      <wsdl:output message="tns:get_MaSizeTrongNgaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_BanhTrongNgay">
+      <wsdl:input message="tns:Insert_BanhTrongNgaySoapIn" />
+      <wsdl:output message="tns:Insert_BanhTrongNgaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="check_BanhDaInsertTrongNgay">
+      <wsdl:input message="tns:check_BanhDaInsertTrongNgaySoapIn" />
+      <wsdl:output message="tns:check_BanhDaInsertTrongNgaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ListBanhNhapTrongNgay">
+      <wsdl:input message="tns:get_ListBanhNhapTrongNgaySoapIn" />
+      <wsdl:output message="tns:get_ListBanhNhapTrongNgaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinBanhKemUpdate">
+      <wsdl:input message="tns:get_ThongTinBanhKemUpdateSoapIn" />
+      <wsdl:output message="tns:get_ThongTinBanhKemUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="set_TTCapNhatBanhTrongNgay">
+      <wsdl:input message="tns:set_TTCapNhatBanhTrongNgaySoapIn" />
+      <wsdl:output message="tns:set_TTCapNhatBanhTrongNgaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="set_TinhTrangBanhTrongNgay">
+      <wsdl:input message="tns:set_TinhTrangBanhTrongNgaySoapIn" />
+      <wsdl:output message="tns:set_TinhTrangBanhTrongNgaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinQuanLyBanhKem">
+      <wsdl:input message="tns:get_ThongTinQuanLyBanhKemSoapIn" />
+      <wsdl:output message="tns:get_ThongTinQuanLyBanhKemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinBanhKemDangChon">
+      <wsdl:input message="tns:get_ThongTinBanhKemDangChonSoapIn" />
+      <wsdl:output message="tns:get_ThongTinBanhKemDangChonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_SizeSanPhamDangChon">
+      <wsdl:input message="tns:get_SizeSanPhamDangChonSoapIn" />
+      <wsdl:output message="tns:get_SizeSanPhamDangChonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_GiaSanPhamTheoSize">
+      <wsdl:input message="tns:get_GiaSanPhamTheoSizeSoapIn" />
+      <wsdl:output message="tns:get_GiaSanPhamTheoSizeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_TenTheLoai">
+      <wsdl:input message="tns:get_TenTheLoaiSoapIn" />
+      <wsdl:output message="tns:get_TenTheLoaiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_TenBanhKem">
+      <wsdl:input message="tns:get_TenBanhKemSoapIn" />
+      <wsdl:output message="tns:get_TenBanhKemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_TenSize">
+      <wsdl:input message="tns:get_TenSizeSoapIn" />
+      <wsdl:output message="tns:get_TenSizeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_TenGiamGia">
+      <wsdl:input message="tns:get_TenGiamGiaSoapIn" />
+      <wsdl:output message="tns:get_TenGiamGiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertSanPham">
+      <wsdl:input message="tns:InsertSanPhamSoapIn" />
+      <wsdl:output message="tns:InsertSanPhamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMaxIdBanhKem">
+      <wsdl:input message="tns:getMaxIdBanhKemSoapIn" />
+      <wsdl:output message="tns:getMaxIdBanhKemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertMaSizeBanh">
+      <wsdl:input message="tns:InsertMaSizeBanhSoapIn" />
+      <wsdl:output message="tns:InsertMaSizeBanhSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMaSizeBanhDangChon">
+      <wsdl:input message="tns:getMaSizeBanhDangChonSoapIn" />
+      <wsdl:output message="tns:getMaSizeBanhDangChonSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSoap" type="tns:WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateSanPham">
+      <soap:operation soapAction="http://tempuri.org/UpdateSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSizeSanPhamDangChon">
+      <soap:operation soapAction="http://tempuri.org/UpdateSizeSanPhamDangChon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinSanPhamUpdate">
+      <soap:operation soapAction="http://tempuri.org/get_ThongTinSanPhamUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinSanPhamUpdate1">
+      <soap:operation soapAction="http://tempuri.org/get_ThongTinSanPhamUpdate1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ListGiamGia">
+      <soap:operation soapAction="http://tempuri.org/get_ListGiamGia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertGiamGia">
+      <soap:operation soapAction="http://tempuri.org/InsertGiamGia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGiamGia">
+      <soap:operation soapAction="http://tempuri.org/UpdateGiamGia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGiamGia">
+      <soap:operation soapAction="http://tempuri.org/DeleteGiamGia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinSanPham">
+      <soap:operation soapAction="http://tempuri.org/get_ThongTinSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinLoaiSPDangChon">
+      <soap:operation soapAction="http://tempuri.org/get_ThongTinLoaiSPDangChon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_imageFile">
+      <soap:operation soapAction="http://tempuri.org/get_imageFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <soap:operation soapAction="http://tempuri.org/UploadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_CTPD">
+      <soap:operation soapAction="http://tempuri.org/insert_CTPD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_PhieuDat">
+      <soap:operation soapAction="http://tempuri.org/insert_PhieuDat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_KhachHang">
+      <soap:operation soapAction="http://tempuri.org/insert_KhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_CTHD">
+      <soap:operation soapAction="http://tempuri.org/insert_CTHD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_HoaDon">
+      <soap:operation soapAction="http://tempuri.org/insert_HoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_CTHDChuaThanhToan">
+      <soap:operation soapAction="http://tempuri.org/get_CTHDChuaThanhToan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_phieuDatChuaThanhToan">
+      <soap:operation soapAction="http://tempuri.org/get_phieuDatChuaThanhToan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_hoaDonChuaThanhToan">
+      <soap:operation soapAction="http://tempuri.org/get_hoaDonChuaThanhToan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_kTraSoLuongBanhTrongNgay">
+      <soap:operation soapAction="http://tempuri.org/get_kTraSoLuongBanhTrongNgay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_MaxMaKhachHang">
+      <soap:operation soapAction="http://tempuri.org/get_MaxMaKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_MAXMaPhieuDat">
+      <soap:operation soapAction="http://tempuri.org/get_MAXMaPhieuDat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_MAXMaHoaDon">
+      <soap:operation soapAction="http://tempuri.org/get_MAXMaHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="check_MaKH">
+      <soap:operation soapAction="http://tempuri.org/check_MaKH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ChiTietPD">
+      <soap:operation soapAction="http://tempuri.org/get_ChiTietPD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ChiTietHD">
+      <soap:operation soapAction="http://tempuri.org/get_ChiTietHD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ListBanhKemvsTheLoai">
+      <soap:operation soapAction="http://tempuri.org/get_ListBanhKemvsTheLoai" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ListBanhTrongNgayVsTheLoai">
+      <soap:operation soapAction="http://tempuri.org/get_ListBanhTrongNgayVsTheLoai" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ListBanhKem">
+      <soap:operation soapAction="http://tempuri.org/get_ListBanhKem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ListBanhTrongNgay">
+      <soap:operation soapAction="http://tempuri.org/get_ListBanhTrongNgay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ListTheLoaiBanh">
+      <soap:operation soapAction="http://tempuri.org/get_ListTheLoaiBanh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_Count_UserNV">
+      <soap:operation soapAction="http://tempuri.org/get_Count_UserNV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_CountUser_PassNV">
+      <soap:operation soapAction="http://tempuri.org/get_CountUser_PassNV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_IDNV">
+      <soap:operation soapAction="http://tempuri.org/get_IDNV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_MaQuyenNV">
+      <soap:operation soapAction="http://tempuri.org/get_MaQuyenNV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_MaHoatDong">
+      <soap:operation soapAction="http://tempuri.org/get_MaHoatDong" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_username">
+      <soap:operation soapAction="http://tempuri.org/get_username" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHour">
+      <soap:operation soapAction="http://tempuri.org/getHour" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMinute">
+      <soap:operation soapAction="http://tempuri.org/getMinute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSecond">
+      <soap:operation soapAction="http://tempuri.org/getSecond" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_soLuongBanhTrongNgaySauThanhToan">
+      <soap:operation soapAction="http://tempuri.org/update_soLuongBanhTrongNgaySauThanhToan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_DanhSachPhieuDat_Online">
+      <soap:operation soapAction="http://tempuri.org/get_DanhSachPhieuDat_Online" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_DanhSachPhieuDat_TaiQuay">
+      <soap:operation soapAction="http://tempuri.org/get_DanhSachPhieuDat_TaiQuay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_DanhSachPhieuDat_DangGiao">
+      <soap:operation soapAction="http://tempuri.org/get_DanhSachPhieuDat_DangGiao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ChiTietPhieuDat">
+      <soap:operation soapAction="http://tempuri.org/get_ChiTietPhieuDat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinPhieuDat">
+      <soap:operation soapAction="http://tempuri.org/get_ThongTinPhieuDat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="set_TinhTrangDangGiaoHangPhieuDat">
+      <soap:operation soapAction="http://tempuri.org/set_TinhTrangDangGiaoHangPhieuDat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="set_TinhTrangGiaoHangXong">
+      <soap:operation soapAction="http://tempuri.org/set_TinhTrangGiaoHangXong" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="search_PhieuDatDangGiao">
+      <soap:operation soapAction="http://tempuri.org/search_PhieuDatDangGiao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="search_PhieuDatOnline">
+      <soap:operation soapAction="http://tempuri.org/search_PhieuDatOnline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="search_PhieuDatTaiQuay">
+      <soap:operation soapAction="http://tempuri.org/search_PhieuDatTaiQuay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_HoaDonDaBan">
+      <soap:operation soapAction="http://tempuri.org/get_HoaDonDaBan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongKePhieuDat">
+      <soap:operation soapAction="http://tempuri.org/get_ThongKePhieuDat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongKeTongTien_HDDaBan">
+      <soap:operation soapAction="http://tempuri.org/get_ThongKeTongTien_HDDaBan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongKeTongTien_PhieuDat">
+      <soap:operation soapAction="http://tempuri.org/get_ThongKeTongTien_PhieuDat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_KH_TiemNang">
+      <soap:operation soapAction="http://tempuri.org/get_KH_TiemNang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_KH_TiemNang_DatHang">
+      <soap:operation soapAction="http://tempuri.org/get_KH_TiemNang_DatHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SoLieu_TongSoHD">
+      <soap:operation soapAction="http://tempuri.org/get_SoLieu_TongSoHD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SoLieu_TongSoPD">
+      <soap:operation soapAction="http://tempuri.org/get_SoLieu_TongSoPD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SoLieu_DoanhThuPD">
+      <soap:operation soapAction="http://tempuri.org/get_SoLieu_DoanhThuPD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SoLieu_DoanhThuHD">
+      <soap:operation soapAction="http://tempuri.org/get_SoLieu_DoanhThuHD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SoLieuBanhTrongNgay">
+      <soap:operation soapAction="http://tempuri.org/get_SoLieuBanhTrongNgay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongKeSoBanhHienTaiTrongNgay">
+      <soap:operation soapAction="http://tempuri.org/get_ThongKeSoBanhHienTaiTrongNgay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongKeSoBanhDaBanTrongNgay">
+      <soap:operation soapAction="http://tempuri.org/get_ThongKeSoBanhDaBanTrongNgay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongKeSoBanhHetHanTrongNgay">
+      <soap:operation soapAction="http://tempuri.org/get_ThongKeSoBanhHetHanTrongNgay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ListBanhHetHan">
+      <soap:operation soapAction="http://tempuri.org/get_ListBanhHetHan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_CountSoLoaiBanh_HetHan">
+      <soap:operation soapAction="http://tempuri.org/get_CountSoLoaiBanh_HetHan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_CountBanhHetHan">
+      <soap:operation soapAction="http://tempuri.org/get_CountBanhHetHan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="set_TinhTrangBanhTrongNgayHetHanThanhFalse">
+      <soap:operation soapAction="http://tempuri.org/set_TinhTrangBanhTrongNgayHetHanThanhFalse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ListDanhSachBanhTrongNgay">
+      <soap:operation soapAction="http://tempuri.org/get_ListDanhSachBanhTrongNgay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinChiTietBanhTrongNgay">
+      <soap:operation soapAction="http://tempuri.org/get_ThongTinChiTietBanhTrongNgay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ListTenBanhKem">
+      <soap:operation soapAction="http://tempuri.org/get_ListTenBanhKem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SizeTheoBanhKem">
+      <soap:operation soapAction="http://tempuri.org/get_SizeTheoBanhKem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_MaSizeBanh">
+      <soap:operation soapAction="http://tempuri.org/get_MaSizeBanh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_MaSizeTrongNgay">
+      <soap:operation soapAction="http://tempuri.org/get_MaSizeTrongNgay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_BanhTrongNgay">
+      <soap:operation soapAction="http://tempuri.org/Insert_BanhTrongNgay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="check_BanhDaInsertTrongNgay">
+      <soap:operation soapAction="http://tempuri.org/check_BanhDaInsertTrongNgay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ListBanhNhapTrongNgay">
+      <soap:operation soapAction="http://tempuri.org/get_ListBanhNhapTrongNgay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinBanhKemUpdate">
+      <soap:operation soapAction="http://tempuri.org/get_ThongTinBanhKemUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="set_TTCapNhatBanhTrongNgay">
+      <soap:operation soapAction="http://tempuri.org/set_TTCapNhatBanhTrongNgay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="set_TinhTrangBanhTrongNgay">
+      <soap:operation soapAction="http://tempuri.org/set_TinhTrangBanhTrongNgay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinQuanLyBanhKem">
+      <soap:operation soapAction="http://tempuri.org/get_ThongTinQuanLyBanhKem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinBanhKemDangChon">
+      <soap:operation soapAction="http://tempuri.org/get_ThongTinBanhKemDangChon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SizeSanPhamDangChon">
+      <soap:operation soapAction="http://tempuri.org/get_SizeSanPhamDangChon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_GiaSanPhamTheoSize">
+      <soap:operation soapAction="http://tempuri.org/get_GiaSanPhamTheoSize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_TenTheLoai">
+      <soap:operation soapAction="http://tempuri.org/get_TenTheLoai" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_TenBanhKem">
+      <soap:operation soapAction="http://tempuri.org/get_TenBanhKem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_TenSize">
+      <soap:operation soapAction="http://tempuri.org/get_TenSize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_TenGiamGia">
+      <soap:operation soapAction="http://tempuri.org/get_TenGiamGia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSanPham">
+      <soap:operation soapAction="http://tempuri.org/InsertSanPham" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMaxIdBanhKem">
+      <soap:operation soapAction="http://tempuri.org/getMaxIdBanhKem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMaSizeBanh">
+      <soap:operation soapAction="http://tempuri.org/InsertMaSizeBanh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMaSizeBanhDangChon">
+      <soap:operation soapAction="http://tempuri.org/getMaSizeBanhDangChon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceSoap12" type="tns:WebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateSanPham">
+      <soap12:operation soapAction="http://tempuri.org/UpdateSanPham" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSizeSanPhamDangChon">
+      <soap12:operation soapAction="http://tempuri.org/UpdateSizeSanPhamDangChon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinSanPhamUpdate">
+      <soap12:operation soapAction="http://tempuri.org/get_ThongTinSanPhamUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinSanPhamUpdate1">
+      <soap12:operation soapAction="http://tempuri.org/get_ThongTinSanPhamUpdate1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ListGiamGia">
+      <soap12:operation soapAction="http://tempuri.org/get_ListGiamGia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertGiamGia">
+      <soap12:operation soapAction="http://tempuri.org/InsertGiamGia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGiamGia">
+      <soap12:operation soapAction="http://tempuri.org/UpdateGiamGia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGiamGia">
+      <soap12:operation soapAction="http://tempuri.org/DeleteGiamGia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinSanPham">
+      <soap12:operation soapAction="http://tempuri.org/get_ThongTinSanPham" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinLoaiSPDangChon">
+      <soap12:operation soapAction="http://tempuri.org/get_ThongTinLoaiSPDangChon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_imageFile">
+      <soap12:operation soapAction="http://tempuri.org/get_imageFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <soap12:operation soapAction="http://tempuri.org/UploadFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_CTPD">
+      <soap12:operation soapAction="http://tempuri.org/insert_CTPD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_PhieuDat">
+      <soap12:operation soapAction="http://tempuri.org/insert_PhieuDat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_KhachHang">
+      <soap12:operation soapAction="http://tempuri.org/insert_KhachHang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_CTHD">
+      <soap12:operation soapAction="http://tempuri.org/insert_CTHD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert_HoaDon">
+      <soap12:operation soapAction="http://tempuri.org/insert_HoaDon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_CTHDChuaThanhToan">
+      <soap12:operation soapAction="http://tempuri.org/get_CTHDChuaThanhToan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_phieuDatChuaThanhToan">
+      <soap12:operation soapAction="http://tempuri.org/get_phieuDatChuaThanhToan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_hoaDonChuaThanhToan">
+      <soap12:operation soapAction="http://tempuri.org/get_hoaDonChuaThanhToan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_kTraSoLuongBanhTrongNgay">
+      <soap12:operation soapAction="http://tempuri.org/get_kTraSoLuongBanhTrongNgay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_MaxMaKhachHang">
+      <soap12:operation soapAction="http://tempuri.org/get_MaxMaKhachHang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_MAXMaPhieuDat">
+      <soap12:operation soapAction="http://tempuri.org/get_MAXMaPhieuDat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_MAXMaHoaDon">
+      <soap12:operation soapAction="http://tempuri.org/get_MAXMaHoaDon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="check_MaKH">
+      <soap12:operation soapAction="http://tempuri.org/check_MaKH" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ChiTietPD">
+      <soap12:operation soapAction="http://tempuri.org/get_ChiTietPD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ChiTietHD">
+      <soap12:operation soapAction="http://tempuri.org/get_ChiTietHD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ListBanhKemvsTheLoai">
+      <soap12:operation soapAction="http://tempuri.org/get_ListBanhKemvsTheLoai" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ListBanhTrongNgayVsTheLoai">
+      <soap12:operation soapAction="http://tempuri.org/get_ListBanhTrongNgayVsTheLoai" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ListBanhKem">
+      <soap12:operation soapAction="http://tempuri.org/get_ListBanhKem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ListBanhTrongNgay">
+      <soap12:operation soapAction="http://tempuri.org/get_ListBanhTrongNgay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ListTheLoaiBanh">
+      <soap12:operation soapAction="http://tempuri.org/get_ListTheLoaiBanh" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_Count_UserNV">
+      <soap12:operation soapAction="http://tempuri.org/get_Count_UserNV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_CountUser_PassNV">
+      <soap12:operation soapAction="http://tempuri.org/get_CountUser_PassNV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_IDNV">
+      <soap12:operation soapAction="http://tempuri.org/get_IDNV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_MaQuyenNV">
+      <soap12:operation soapAction="http://tempuri.org/get_MaQuyenNV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_MaHoatDong">
+      <soap12:operation soapAction="http://tempuri.org/get_MaHoatDong" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_username">
+      <soap12:operation soapAction="http://tempuri.org/get_username" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHour">
+      <soap12:operation soapAction="http://tempuri.org/getHour" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMinute">
+      <soap12:operation soapAction="http://tempuri.org/getMinute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSecond">
+      <soap12:operation soapAction="http://tempuri.org/getSecond" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_soLuongBanhTrongNgaySauThanhToan">
+      <soap12:operation soapAction="http://tempuri.org/update_soLuongBanhTrongNgaySauThanhToan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_DanhSachPhieuDat_Online">
+      <soap12:operation soapAction="http://tempuri.org/get_DanhSachPhieuDat_Online" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_DanhSachPhieuDat_TaiQuay">
+      <soap12:operation soapAction="http://tempuri.org/get_DanhSachPhieuDat_TaiQuay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_DanhSachPhieuDat_DangGiao">
+      <soap12:operation soapAction="http://tempuri.org/get_DanhSachPhieuDat_DangGiao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ChiTietPhieuDat">
+      <soap12:operation soapAction="http://tempuri.org/get_ChiTietPhieuDat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinPhieuDat">
+      <soap12:operation soapAction="http://tempuri.org/get_ThongTinPhieuDat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="set_TinhTrangDangGiaoHangPhieuDat">
+      <soap12:operation soapAction="http://tempuri.org/set_TinhTrangDangGiaoHangPhieuDat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="set_TinhTrangGiaoHangXong">
+      <soap12:operation soapAction="http://tempuri.org/set_TinhTrangGiaoHangXong" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="search_PhieuDatDangGiao">
+      <soap12:operation soapAction="http://tempuri.org/search_PhieuDatDangGiao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="search_PhieuDatOnline">
+      <soap12:operation soapAction="http://tempuri.org/search_PhieuDatOnline" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="search_PhieuDatTaiQuay">
+      <soap12:operation soapAction="http://tempuri.org/search_PhieuDatTaiQuay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_HoaDonDaBan">
+      <soap12:operation soapAction="http://tempuri.org/get_HoaDonDaBan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongKePhieuDat">
+      <soap12:operation soapAction="http://tempuri.org/get_ThongKePhieuDat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongKeTongTien_HDDaBan">
+      <soap12:operation soapAction="http://tempuri.org/get_ThongKeTongTien_HDDaBan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongKeTongTien_PhieuDat">
+      <soap12:operation soapAction="http://tempuri.org/get_ThongKeTongTien_PhieuDat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_KH_TiemNang">
+      <soap12:operation soapAction="http://tempuri.org/get_KH_TiemNang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_KH_TiemNang_DatHang">
+      <soap12:operation soapAction="http://tempuri.org/get_KH_TiemNang_DatHang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SoLieu_TongSoHD">
+      <soap12:operation soapAction="http://tempuri.org/get_SoLieu_TongSoHD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SoLieu_TongSoPD">
+      <soap12:operation soapAction="http://tempuri.org/get_SoLieu_TongSoPD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SoLieu_DoanhThuPD">
+      <soap12:operation soapAction="http://tempuri.org/get_SoLieu_DoanhThuPD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SoLieu_DoanhThuHD">
+      <soap12:operation soapAction="http://tempuri.org/get_SoLieu_DoanhThuHD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SoLieuBanhTrongNgay">
+      <soap12:operation soapAction="http://tempuri.org/get_SoLieuBanhTrongNgay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongKeSoBanhHienTaiTrongNgay">
+      <soap12:operation soapAction="http://tempuri.org/get_ThongKeSoBanhHienTaiTrongNgay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongKeSoBanhDaBanTrongNgay">
+      <soap12:operation soapAction="http://tempuri.org/get_ThongKeSoBanhDaBanTrongNgay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongKeSoBanhHetHanTrongNgay">
+      <soap12:operation soapAction="http://tempuri.org/get_ThongKeSoBanhHetHanTrongNgay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ListBanhHetHan">
+      <soap12:operation soapAction="http://tempuri.org/get_ListBanhHetHan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_CountSoLoaiBanh_HetHan">
+      <soap12:operation soapAction="http://tempuri.org/get_CountSoLoaiBanh_HetHan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_CountBanhHetHan">
+      <soap12:operation soapAction="http://tempuri.org/get_CountBanhHetHan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="set_TinhTrangBanhTrongNgayHetHanThanhFalse">
+      <soap12:operation soapAction="http://tempuri.org/set_TinhTrangBanhTrongNgayHetHanThanhFalse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ListDanhSachBanhTrongNgay">
+      <soap12:operation soapAction="http://tempuri.org/get_ListDanhSachBanhTrongNgay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinChiTietBanhTrongNgay">
+      <soap12:operation soapAction="http://tempuri.org/get_ThongTinChiTietBanhTrongNgay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ListTenBanhKem">
+      <soap12:operation soapAction="http://tempuri.org/get_ListTenBanhKem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SizeTheoBanhKem">
+      <soap12:operation soapAction="http://tempuri.org/get_SizeTheoBanhKem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_MaSizeBanh">
+      <soap12:operation soapAction="http://tempuri.org/get_MaSizeBanh" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_MaSizeTrongNgay">
+      <soap12:operation soapAction="http://tempuri.org/get_MaSizeTrongNgay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_BanhTrongNgay">
+      <soap12:operation soapAction="http://tempuri.org/Insert_BanhTrongNgay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="check_BanhDaInsertTrongNgay">
+      <soap12:operation soapAction="http://tempuri.org/check_BanhDaInsertTrongNgay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ListBanhNhapTrongNgay">
+      <soap12:operation soapAction="http://tempuri.org/get_ListBanhNhapTrongNgay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinBanhKemUpdate">
+      <soap12:operation soapAction="http://tempuri.org/get_ThongTinBanhKemUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="set_TTCapNhatBanhTrongNgay">
+      <soap12:operation soapAction="http://tempuri.org/set_TTCapNhatBanhTrongNgay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="set_TinhTrangBanhTrongNgay">
+      <soap12:operation soapAction="http://tempuri.org/set_TinhTrangBanhTrongNgay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinQuanLyBanhKem">
+      <soap12:operation soapAction="http://tempuri.org/get_ThongTinQuanLyBanhKem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ThongTinBanhKemDangChon">
+      <soap12:operation soapAction="http://tempuri.org/get_ThongTinBanhKemDangChon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_SizeSanPhamDangChon">
+      <soap12:operation soapAction="http://tempuri.org/get_SizeSanPhamDangChon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_GiaSanPhamTheoSize">
+      <soap12:operation soapAction="http://tempuri.org/get_GiaSanPhamTheoSize" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_TenTheLoai">
+      <soap12:operation soapAction="http://tempuri.org/get_TenTheLoai" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_TenBanhKem">
+      <soap12:operation soapAction="http://tempuri.org/get_TenBanhKem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_TenSize">
+      <soap12:operation soapAction="http://tempuri.org/get_TenSize" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_TenGiamGia">
+      <soap12:operation soapAction="http://tempuri.org/get_TenGiamGia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSanPham">
+      <soap12:operation soapAction="http://tempuri.org/InsertSanPham" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMaxIdBanhKem">
+      <soap12:operation soapAction="http://tempuri.org/getMaxIdBanhKem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMaSizeBanh">
+      <soap12:operation soapAction="http://tempuri.org/InsertMaSizeBanh" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMaSizeBanhDangChon">
+      <soap12:operation soapAction="http://tempuri.org/getMaSizeBanhDangChon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService">
+    <wsdl:port name="WebServiceSoap" binding="tns:WebServiceSoap">
+      <soap:address location="http://localhost:50629/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceSoap12" binding="tns:WebServiceSoap12">
+      <soap12:address location="http://localhost:50629/WebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

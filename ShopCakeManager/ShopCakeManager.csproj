@@ -1,0 +1,596 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0FB86BAD-7F8D-4784-ADA6-161DE8930472}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShopCakeManager</RootNamespace>
+    <AssemblyName>ShopCakeManager</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BunifuDataViz 1.0">
+      <HintPath>D:\BaiTapWFPro\WF Backup01\ShopCakeManager\ShopCakeManager\bin\Debug\BunifuDataViz 1.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.14, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\MaskedDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConvertDataTable.cs" />
+    <Compile Include="frmCatHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCatHD.designer.cs">
+      <DependentUpon>frmCatHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNote.Designer.cs">
+      <DependentUpon>frmNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_BanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_BanHang.designer.cs">
+      <DependentUpon>frm_BanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_BanhTrongNgay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_BanhTrongNgay.designer.cs">
+      <DependentUpon>frm_BanhTrongNgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_CheckBanhHetHan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_CheckBanhHetHan.designer.cs">
+      <DependentUpon>frm_CheckBanhHetHan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ChiTietPhieuDat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ChiTietPhieuDat.designer.cs">
+      <DependentUpon>frm_ChiTietPhieuDat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_DanhSachKHTiemNang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DanhSachKHTiemNang.designer.cs">
+      <DependentUpon>frm_DanhSachKHTiemNang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_GiamGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_GiamGia.Designer.cs">
+      <DependentUpon>frm_GiamGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_HoaDonOnLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_HoaDonOnLine.designer.cs">
+      <DependentUpon>frm_HoaDonOnLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_NhapKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_NhapKhachHang.Designer.cs">
+      <DependentUpon>frm_NhapKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_QuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_QuanLy.designer.cs">
+      <DependentUpon>frm_QuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SanPham.Designer.cs">
+      <DependentUpon>frm_SanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TheLoaiSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TheLoaiSanPham.Designer.cs">
+      <DependentUpon>frm_TheLoaiSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ThemBanhTrongNgay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThemBanhTrongNgay.Designer.cs">
+      <DependentUpon>frm_ThemBanhTrongNgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ThemSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThemSanPham.Designer.cs">
+      <DependentUpon>frm_ThemSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThongKe.designer.cs">
+      <DependentUpon>frm_ThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\CTHD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\CTHD.Designer.cs">
+      <DependentUpon>CTHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Alert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Alert.designer.cs">
+      <DependentUpon>frm_Alert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DangNhap.designer.cs">
+      <DependentUpon>frm_DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC\SanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\SanPham.Designer.cs">
+      <DependentUpon>SanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UC\TheLoaiSP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\TheLoaiSP.Designer.cs">
+      <DependentUpon>TheLoaiSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ThemBanhTrongNgay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ThemBanhTrongNgay.Designer.cs">
+      <DependentUpon>ThemBanhTrongNgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\TTBK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\TTBK.Designer.cs">
+      <DependentUpon>TTBK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_ChiTetBanhKem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_ChiTetBanhKem.designer.cs">
+      <DependentUpon>UC_ChiTetBanhKem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_ListSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_ListSanPham.Designer.cs">
+      <DependentUpon>UC_ListSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_LoaiSP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_LoaiSP.Designer.cs">
+      <DependentUpon>UC_LoaiSP.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmCatHD.resx">
+      <DependentUpon>frmCatHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNote.resx">
+      <DependentUpon>frmNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Alert.resx">
+      <DependentUpon>frm_Alert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_BanHang.resx">
+      <DependentUpon>frm_BanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_BanhTrongNgay.resx">
+      <DependentUpon>frm_BanhTrongNgay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_CheckBanhHetHan.resx">
+      <DependentUpon>frm_CheckBanhHetHan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ChiTietPhieuDat.resx">
+      <DependentUpon>frm_ChiTietPhieuDat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_DangNhap.resx">
+      <DependentUpon>frm_DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_DanhSachKHTiemNang.resx">
+      <DependentUpon>frm_DanhSachKHTiemNang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_GiamGia.resx">
+      <DependentUpon>frm_GiamGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_HoaDonOnLine.resx">
+      <DependentUpon>frm_HoaDonOnLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_NhapKhachHang.resx">
+      <DependentUpon>frm_NhapKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_QuanLy.resx">
+      <DependentUpon>frm_QuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SanPham.resx">
+      <DependentUpon>frm_SanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TheLoaiSanPham.resx">
+      <DependentUpon>frm_TheLoaiSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThemBanhTrongNgay.resx">
+      <DependentUpon>frm_ThemBanhTrongNgay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThemSanPham.resx">
+      <DependentUpon>frm_ThemSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThongKe.resx">
+      <DependentUpon>frm_ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UC\CTHD.resx">
+      <DependentUpon>CTHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\SanPham.resx">
+      <DependentUpon>SanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\TheLoaiSP.resx">
+      <DependentUpon>TheLoaiSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ThemBanhTrongNgay.resx">
+      <DependentUpon>ThemBanhTrongNgay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\TTBK.resx">
+      <DependentUpon>TTBK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_ChiTetBanhKem.resx">
+      <DependentUpon>UC_ChiTetBanhKem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_ListSanPham.resx">
+      <DependentUpon>UC_ListSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_LoaiSP.resx">
+      <DependentUpon>UC_LoaiSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.ArrayOfInt.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.BanhKem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.ChiTietHD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.ChiTietHoaDonChuaThanhToan.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.ChiTietPD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_ChiTietHDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_ChiTietPDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_ChiTietPhieuDatResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_CountUser_PassNVResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_Count_UserNVResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_CTHDChuaThanhToanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_DanhSachPhieuDat_DangGiaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_DanhSachPhieuDat_OnlineResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_DanhSachPhieuDat_TaiQuayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_hoaDonChuaThanhToanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_HoaDonDaBanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_IDNVResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_imageFileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_KH_TiemNangResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_KH_TiemNang_DatHangResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_ListBanhHetHanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_ListBanhKemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_ListBanhKemvsTheLoaiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_ListBanhNhapTrongNgayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_ListBanhTrongNgayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_ListBanhTrongNgayVsTheLoaiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_ListDanhSachBanhTrongNgayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_ListGiamGiaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_ListTenBanhKemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_ListTheLoaiBanhResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_MaHoatDongResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_phieuDatChuaThanhToanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_SizeSanPhamDangChonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_SizeTheoBanhKemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_SoLieuBanhTrongNgayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_TenBanhKemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_TenGiamGiaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_TenSizeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_TenTheLoaiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_ThongKePhieuDatResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_ThongTinBanhKemDangChonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_ThongTinBanhKemUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_ThongTinChiTietBanhTrongNgayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_ThongTinLoaiSPDangChonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_ThongTinPhieuDatResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_ThongTinQuanLyBanhKemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_ThongTinSanPhamResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_ThongTinSanPhamUpdate1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_ThongTinSanPhamUpdateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.get_usernameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.GiamGia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.InsertGiamGiaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.InsertSanPhamResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.insert_KhachHangResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.insert_PhieuDatResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.MaBanhTrongNgay.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.search_PhieuDatDangGiaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.search_PhieuDatOnlineResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.search_PhieuDatTaiQuayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.set_TinhTrangDangGiaoHangPhieuDatResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.set_TinhTrangGiaoHangXongResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.SizeBanhKem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.TheLoaiBanh.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.TheLoaiBanhKem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.ThongKeBanhTrongNgay.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.ThongTinBanhKem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.ThongTinBanhKem_Insert.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.ThongTinBanhTrongNgay.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.ThongTinChiTietBanhTrongNgay.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.ThongTinGiamGia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.ThongTinHoaDon.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.ThongTinHoaDonChuaThanhToan.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.ThongTinKhachHang.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.ThongTinPhieuDat.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.ThongTinPhieuDatChuaThanhToan.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.ThongTinQuanLySanPham.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.ThongTinSanPham.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.ThongTinSize.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.UpdateGiamGiaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.UpdateSanPhamResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\ShopCakeManager.ServiceReference.UploadFileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\WebService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
